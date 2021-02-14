@@ -1,5 +1,6 @@
-package Modul2.OneArrays;
-/*. Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы. */
+package by.java_online.modul2.one_arrays;
+
+// Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы.
 
 public class Task4 {
     public static void main(String[] args) {

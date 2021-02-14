@@ -1,6 +1,8 @@
-package Modul2.OneArrays;
-/* В массиве целых чисел с количеством элементов n найти наиболее часто встречающееся число. Если таких
-чисел несколько, то определить наименьшее из них.*/
+package by.java_online.modul2.one_arrays;
+
+/* В массиве целых чисел с количеством элементов n найти наиболее часто встречающееся число.
+ * Если таких чисел несколько, то определить наименьшее из них.
+ */
 
 public class Task9 {
     public static void main(String[] args) {
@@ -40,9 +42,7 @@ public class Task9 {
             if (popularCounts==counts[i]&& arrays[i] < arrays[popularIndex]) {
                 popularIndex = i;
             }
-
         }
-       // printArray(counts);
         return arrays[popularIndex];
     }
 }

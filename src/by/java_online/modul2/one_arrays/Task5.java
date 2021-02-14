@@ -1,5 +1,6 @@
-package Modul2.OneArrays;
-/* Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для которых аi > i.*/
+package by.java_online.modul2.one_arrays;
+
+// Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для которых аi > i.
 
 public class Task5 {
     public static void main(String[] args) {

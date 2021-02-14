@@ -1,6 +1,8 @@
-package Modul2.OneArrays;
-/*  Дан массив действительных чисел, размерность которого N. Подсчитать, сколько в нем отрицательных,
-положительных и нулевых элементов.*/
+package by.java_online.modul2.one_arrays;
+
+/* Дан массив действительных чисел, размерность которого N.
+ * Подсчитать, сколько в нем отрицательных, положительных и нулевых элементов.
+ */
 
 public class Task3 {
     public static void main(String[] args) {
@@ -22,6 +24,7 @@ public class Task3 {
             }
         }
         System.out.println("Массив действительных чисел:");
+
         for (int j: array) {
             System.out.print(j + ", ");
         }
