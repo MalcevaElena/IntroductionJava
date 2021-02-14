@@ -12,5 +12,5 @@ public class Task3 {
         double result = (Math.sin(radiansX)+ Math.cos(radiansY))/
                 (Math.sin(radiansY)-Math.cos(radiansX))*Math.tan(radiansX*radiansY);
         System.out.format("Значение выражения равено:" + result);
-    }
+        }
 }
