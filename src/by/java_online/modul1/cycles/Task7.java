@@ -1,6 +1,8 @@
-package Modul1.Cycles;
-/* Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа.
-m и n вводятся с клавиатуры.*/
+package by.java_online.modul1.cycles;
+
+/* Для каждого натурального числа в промежутке от m до n вывести все делители,
+ * кроме единицы и самого числа. m и n вводятся с клавиатуры.
+ */
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,10 +35,10 @@ public class Task7 {
            }
         }
         catch (NumberFormatException e) {
-                System.out.println("Вы ввели нецелое положительное число.");
+            System.out.println("Вы ввели нецелое число.");
         }
-        catch (IOException e) {
-            System.out.println("Ошибка");
+        catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }

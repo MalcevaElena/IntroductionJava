@@ -1,12 +1,13 @@
-package Modul1.Cycles;
+package by.java_online.modul1.cycles;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/*. Напишите программу, где пользователь вводит любое целое положительное число. А программа суммирует
-все числа от 1 до введенного пользователем числа.
-*/
+/*. Напишите программу, где пользователь вводит любое целое положительное число.
+ *  А программа суммирует все числа от 1 до введенного пользователем числа.
+ */
+
 public class Task1 {
     static int number;
     static int sum ;
@@ -21,16 +22,17 @@ public class Task1 {
                 for (int i = 1; i <= number; i++) {
                     sum += i;
                 }
+                System.out.print ("Сумма чисел от 1 до введенного пользователем числа равна: ");
                 System.out.println(sum);
             } else {
                 System.out.println("Вы ввели отрицательное число.");
             }
         }
         catch (NumberFormatException e) {
-            System.out.println("Вы ввели нецелое положительное число.");
+            System.out.println("Вы ввели не число или не целое число.");
         }
         catch (IOException ex) {
-            System.out.println("Ошибка.");
+            ex.printStackTrace();
         }
     }
 }

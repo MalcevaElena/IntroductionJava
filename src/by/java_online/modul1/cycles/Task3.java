@@ -1,5 +1,6 @@
-package Modul1.Cycles;
-/* Найти сумму квадратов первых ста чисел.*/
+package by.java_online.modul1.cycles;
+
+// Найти сумму квадратов первых ста чисел.
 
 public class Task3 {
     public static void main(String[] args) {
