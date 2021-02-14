@@ -1,6 +1,6 @@
-package Modul1.LinearPrograms;
+package by.java_online.modul1.linear_programs;
 
-/* Найдите значение функции:  z = ( (a – 3 ) * b / 2) + c.*/
+// Найдите значение функции:  z = ( (a – 3 ) * b / 2) + c.
 
 public class Task1 {
     public static void main(String[] args) {
