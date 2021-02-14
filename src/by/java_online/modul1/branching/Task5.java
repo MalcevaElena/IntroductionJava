@@ -1,5 +1,9 @@
-package Modul1.Branching;
-/* Вычислить значение функции: */
+package by.java_online.modul1.branching;
+
+/* Вычислить значение функции:
+* x^2-3x+9, если x<=3
+*  1 / (x^3 +6), если >3
+*  */
 public class Task5 {
     public static void main(String[] args) {
         int x = 3;
