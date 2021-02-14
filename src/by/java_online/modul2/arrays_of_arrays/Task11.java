@@ -1,8 +1,9 @@
-/*
-Матрицу 10x20 заполнить случайными числами от 0 до 15. Вывести на экран саму матрицу и номера строк, в
-которых число 5 встречается три и более раз.
+package by.java_online.modul2.arrays_of_arrays;
+
+/* Матрицу 10x20 заполнить случайными числами от 0 до 15.
+ * Вывести на экран саму матрицу и номера строк, в
+ * которых число 5 встречается три и более раз.
  */
-package Modul2.ArraysOfArrays;
 
 public class Task11 {
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class Task11 {
             for (int j = 0; j < arrays[i].length; j++) {
                 System.out.printf("%3d\t", arrays[i][j]);
             }
-            System.out.println();
+        System.out.println();
         }
     }
     public static void searchFive(int [][] array){
@@ -37,7 +38,6 @@ public class Task11 {
                     break;
                 }
             }
-
         }
     }
 }

@@ -1,5 +1,6 @@
-package Modul2.ArraysOfArrays;
-/*Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего. */
+package by.java_online.modul2.arrays_of_arrays;
+
+// Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
 
 public class Task1 {
     public static void main(String[] args) {
@@ -11,7 +12,8 @@ public class Task1 {
         }
         System.out.println("Дана матрица:");
         printMatrix(matrix);
-        System.out.println("Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.");
+        System.out.println("Вывести на экран все нечетные столбцы," +
+                " у которых первый элемент больше последнего.");
         printOddColumn(matrix);
     }
     public static void printMatrix (int [][] arrays){

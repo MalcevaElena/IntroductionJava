@@ -1,7 +1,8 @@
-/*Сформировать случайную матрицу m x n, состоящую из нулей и единиц, причем в каждом столбце число
-единиц равно номеру столбца.
+package by.java_online.modul2.arrays_of_arrays;
+
+/* Сформировать случайную матрицу m x n, состоящую из нулей и единиц,
+ * причем в каждом столбце число единиц равно номеру столбца.
  */
-package Modul2.ArraysOfArrays;
 
 public class Task14 {
     public static void main(String[] args) {

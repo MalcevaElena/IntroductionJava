@@ -1,7 +1,6 @@
-/*
-Найдите наибольший элемент матрицы и заменить все нечетные элементы на него.
- */
-package Modul2.ArraysOfArrays;
+package by.java_online.modul2.arrays_of_arrays;
+
+//Найдите наибольший элемент матрицы и заменить все нечетные элементы на него.
 
 public class Task15 {
     static int max = 0;
@@ -30,7 +29,7 @@ public class Task15 {
             for (int j = 0; j < arrays[i].length; j++) {
                 System.out.printf("%3d\t", arrays[i][j]);
             }
-            System.out.println();
+        System.out.println();
         }
     }
     public static void replacementElement (int [][] array) {

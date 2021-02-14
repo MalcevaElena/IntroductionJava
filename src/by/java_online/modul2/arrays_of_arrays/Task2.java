@@ -1,6 +1,7 @@
-package Modul2.ArraysOfArrays;
-/*. Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
-*/
+package by.java_online.modul2.arrays_of_arrays;
+
+// Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
+
 public class Task2 {
     public static void main(String[] args) {
         int [][] matrix = new int[9][9];

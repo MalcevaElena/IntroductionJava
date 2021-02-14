@@ -1,5 +1,6 @@
-package Modul2.ArraysOfArrays;
-/*Дана матрица. Вывести k-ю строку и p-й столбец матрицы.*/
+package by.java_online.modul2.arrays_of_arrays;
+
+// Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
 
 public class Task3 {
     private static int k = (int) (Math.random()*5);

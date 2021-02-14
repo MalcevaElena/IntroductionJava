@@ -1,7 +1,6 @@
-/*
-Найти положительные элементы главной диагонали квадратной матрицы.
- */
-package Modul2.ArraysOfArrays;
+package by.java_online.modul2.arrays_of_arrays;
+
+//Найти положительные элементы главной диагонали квадратной матрицы.
 
 public class Task10 {
     public static void main(String[] args) {
@@ -33,7 +32,6 @@ public class Task10 {
                      System.out.printf("%3d\t", array[i][j]);
                  }
             }
-
         }
     }
 }

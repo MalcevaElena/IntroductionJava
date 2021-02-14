@@ -1,9 +1,10 @@
-package Modul2.ArraysOfArrays;
-/* . Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
-{ 1 1 1 1 }
-{ 2 2 2 0 }
-{ 3 3 0 0 }
-{ 4 0 0 0 }
+package by.java_online.modul2.arrays_of_arrays;
+
+/* Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
+ * { 1 1 1 1 }
+ * { 2 2 2 0 }
+ * { 3 3 0 0 }
+ * { 4 0 0 0 }
  */
 public class Task5 {
     public static void main(String[] args) {

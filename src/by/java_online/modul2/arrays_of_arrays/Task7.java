@@ -1,8 +1,7 @@
-package Modul2.ArraysOfArrays;
-/*
-7. Сформировать квадратную матрицу порядка N по правилу:
-A [I,J] = sin ((I^2-J^2)/N)
-и подсчитать количество положительных элементов в ней.
+package by.java_online.modul2.arrays_of_arrays;
+/* Сформировать квадратную матрицу порядка N по правилу:
+ * A [I,J] = sin ((I^2-J^2)/N)
+ * и подсчитать количество положительных элементов в ней.
  */
 public class Task7 {
     public static void main(String[] args) {

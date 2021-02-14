@@ -1,7 +1,6 @@
-/*
-Отсотрировать стобцы матрицы по возрастанию и убыванию значений эементов.
- */
-package Modul2.ArraysOfArrays;
+package by.java_online.modul2.arrays_of_arrays;
+
+// Отсотрировать стобцы матрицы по возрастанию и убыванию значений эементов.
 
 public class Task13 {
     public static void main(String[] args) {
@@ -36,11 +35,11 @@ public class Task13 {
                         tmp = arrays[k+1][j];
                         arrays[k+1][j] = arrays[k][j];
                         arrays[k][j] = tmp;
-                        }
                     }
                 }
             }
-        printMatrix(arrays);
+        }
+    printMatrix(arrays);
     }
     public static void sortDecrease (int [][] array) {
         int tmp;
@@ -51,11 +50,11 @@ public class Task13 {
                         tmp = array[k+1][j];
                         array[k+1][j] = array[k][j];
                         array[k][j] = tmp;
-                        }
                     }
                 }
             }
-        printMatrix(array);
+        }
+    printMatrix(array);
     }
 }
 

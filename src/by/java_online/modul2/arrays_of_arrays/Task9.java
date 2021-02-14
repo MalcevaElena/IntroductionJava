@@ -1,7 +1,8 @@
-package Modul2.ArraysOfArrays;
-/*
- Задана матрица неотрицательных чисел. Посчитать сумму элементов в каждом столбце. Определить, какой
-столбец содержит максимальную сумму.
+package by.java_online.modul2.arrays_of_arrays;
+
+/* Задана матрица неотрицательных чисел.
+ * Посчитать сумму элементов в каждом столбце.
+ * Определить, какой столбец содержит максимальную сумму.
  */
 public class Task9 {
     public static void main(String[] args) {
@@ -20,9 +21,6 @@ public class Task9 {
     printArray(matrixSum);
     int indexMax = maxElement(matrixSum)+1;
     System.out.println("максимальную сумму содержит столбец №"+indexMax);
-
-
-
 }
     public static void printMatrix (double [][] arrays){
         for (int i = 0; i < arrays.length; i++) {

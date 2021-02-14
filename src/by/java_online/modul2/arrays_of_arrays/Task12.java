@@ -1,7 +1,6 @@
-/*
- Отсортировать строки матрицы по возрастанию и убыванию значений элементов.
- */
-package Modul2.ArraysOfArrays;
+package by.java_online.modul2.arrays_of_arrays;
+
+// Отсортировать строки матрицы по возрастанию и убыванию значений элементов.
 
 public class Task12 {
     public static void main(String[] args) {
@@ -24,7 +23,7 @@ public class Task12 {
             for (int j = 0; j < arrays[i].length; j++) {
                 System.out.printf("%3d\t", arrays[i][j]);
             }
-            System.out.println();
+        System.out.println();
         }
     }
     public static void sortIncrease (int [][] arrays){
@@ -40,7 +39,7 @@ public class Task12 {
                 }
             }
         }
-        printMatrix(arrays);
+    printMatrix(arrays);
     }
     public static void sortDecrease (int [][] array) {
         int tmp;
@@ -55,6 +54,6 @@ public class Task12 {
                 }
             }
         }
-        printMatrix(array);
+    printMatrix(array);
     }
 }
