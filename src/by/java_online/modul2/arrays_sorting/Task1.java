@@ -22,16 +22,15 @@ public class Task1 {
     public static void unionOfArray (int [] one, int [] two, int x) {
         int [] arrays = new int[one.length+two.length];
         for (int i = 0; i < arrays.length; i++) {
-            if (i < x){
+            if (i < x){ // записываем первый массив до К-го элемента
                 arrays[i] = one[i];
             }
-            if (i == x) {
-                for (int j = 0; j < two.length; j++) {
+            else if (i == x) { // аписываем второй массив
+                for (int j = 0; j < two.length; j++, i++) {
                     arrays[i] = two[j];
-                    i++;
                 }
             }
-            if (i > x + two.length-1){
+            if (i > x + two.length-1){ // записываем остаток первого массива
                 arrays [i] = one[i-two.length];
             }
         }
