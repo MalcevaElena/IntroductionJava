@@ -14,13 +14,12 @@ public class Task4 {
         if (x <= a && y <= b || y <= a && x <= b) {
             System.out.println("Пройдет стороной Х/Y");
         }
-        if (x <= a && z <= b || z <= a && x <= b ) {
+        if (x <= a && z <= b || z <= a && x <= b) {
             System.out.println("Пройдет стороной X/Z");
         }
         if (z <= a && y <= b || y <= a && z <= b) {
             System.out.println("Пройдет стороной Z/Y");
-        }
-        else {
+        } else {
             System.out.println("Не пройдет");
         }
     }

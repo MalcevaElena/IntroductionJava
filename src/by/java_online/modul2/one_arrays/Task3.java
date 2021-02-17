@@ -10,26 +10,24 @@ public class Task3 {
         int negativeNumber = 0;
         int zeroNumber = 0;
         int n = 20;
-        int [] array = new int[n];
+        int[] array = new int[n];
         for (int i = 0; i < array.length; i++) {
-            array [i] = (int) (Math.random()* 10 - 5);
-            if (array [i] > 0) {
+            array[i] = (int) (Math.random() * 10 - 5);
+            if (array[i] > 0) {
                 positiveNumber++;
-            }
-            else if (array [i] < 0) {
+            } else if (array[i] < 0) {
                 negativeNumber++;
-            }
-            else {
+            } else {
                 zeroNumber++;
             }
         }
         System.out.println("Массив действительных чисел:");
 
-        for (int j: array) {
+        for (int j : array) {
             System.out.print(j + ", ");
         }
         System.out.println();
-        System.out.println("Отрицательных чисел: "+negativeNumber+"," +
-                " положительных: "+positiveNumber+", и нулевых: "+ zeroNumber);
+        System.out.println("Отрицательных чисел: " + negativeNumber + "," +
+                " положительных: " + positiveNumber + ", и нулевых: " + zeroNumber);
     }
 }

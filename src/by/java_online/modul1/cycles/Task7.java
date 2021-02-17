@@ -19,25 +19,22 @@ public class Task7 {
             System.out.println("Введите положительное целое число n:");
             n = Integer.parseInt(reader.readLine());
             reader.close();
-            if (m >= 0 && n >=0 && m <= n) {
+            if (m >= 0 && n >= 0 && m <= n) {
                 for (int i = m; i <= n; i++) {
-                    System.out.print("Делители для числа "+i+": ");
-                    for (int y =2; y <n; y++){
-                        if (i%y==0 && i!=y) {
+                    System.out.print("Делители для числа " + i + ": ");
+                    for (int y = 2; y < n; y++) {
+                        if (i % y == 0 && i != y) {
                             System.out.print(y + " ");
                         }
                     }
                     System.out.println();
                 }
+            } else {
+                System.out.println("Вы ввели отрицательное число или m меньше n.");
             }
-           else {
-               System.out.println("Вы ввели отрицательное число или m меньше n.");
-           }
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Вы ввели нецелое число.");
-        }
-        catch (IOException ex) {
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }

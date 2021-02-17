@@ -13,8 +13,8 @@ public class Task8 {
         ArrayList<Integer> valueElementsTwo = new ArrayList<>();
 
         for (int i = one; i > 0; i /= 10) { //разбиваеи число на отдельные числа
-             int b = i % 10;
-             valueElementsOne.add(b);
+            int b = i % 10;
+            valueElementsOne.add(b);
         }
         for (int y = two; y > 0; y /= 10) {
             int c = y % 10;
@@ -22,12 +22,12 @@ public class Task8 {
         }
         System.out.print("Цифры, входящие в запись как первого так и второго числа: ");
 
-        for (int e = 0; e < valueElementsOne.size() ; e++) { //проверяем числа на совпадения
+        for (int e = 0; e < valueElementsOne.size(); e++) { //проверяем числа на совпадения
             int elementOne = valueElementsOne.get(e);
             for (int y = 0; y < valueElementsTwo.size(); y++) {
                 int elementTwo = valueElementsTwo.get(y);
                 if (elementOne == elementTwo) {
-                    System.out.print(elementOne +" ");
+                    System.out.print(elementOne + " ");
                     break;
                 }
             }

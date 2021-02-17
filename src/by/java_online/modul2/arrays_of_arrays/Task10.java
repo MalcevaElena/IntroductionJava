@@ -5,10 +5,10 @@ package by.java_online.modul2.arrays_of_arrays;
 public class Task10 {
     public static void main(String[] args) {
         int n = 6;
-        int [][] matrix = new int [n][n];
+        int[][] matrix = new int[n][n];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix [i][j] = (int)(Math.random()*10)-5;
+                matrix[i][j] = (int) (Math.random() * 10) - 5;
             }
         }
         System.out.println("Дана квадратная матрица:");
@@ -17,7 +17,7 @@ public class Task10 {
         printPositiveElement(matrix);
     }
 
-    public static void printMatrix (int [][] arrays){
+    public static void printMatrix(int[][] arrays) {
         for (int i = 0; i < arrays.length; i++) {
             for (int j = 0; j < arrays[i].length; j++) {
                 System.out.printf("%3d\t", arrays[i][j]);
@@ -25,12 +25,13 @@ public class Task10 {
             System.out.println();
         }
     }
-    public static void printPositiveElement (int [][] array){
+
+    public static void printPositiveElement(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                 if (i==j && array[i][j]>0){
-                     System.out.printf("%3d\t", array[i][j]);
-                 }
+                if (i == j && array[i][j] > 0) {
+                    System.out.printf("%3d\t", array[i][j]);
+                }
             }
         }
     }

@@ -12,15 +12,14 @@ public class Task2 {
         double h = 2;
         double x;
         double y;
-        for (double i =a; i <=b ; i+=h) {
-            x=i;
-            if (x>2){
-                y=x;
+        for (double i = a; i <= b; i += h) {
+            x = i;
+            if (x > 2) {
+                y = x;
+            } else {
+                y = -x;
             }
-            else {
-                y=-x;
-            }
-            System.out.println("Значение функции на отрезке [" +a+", "+b+"] = " +y );
+            System.out.println("Значение функции на отрезке [" + a + ", " + b + "] = " + y);
         }
     }
 }

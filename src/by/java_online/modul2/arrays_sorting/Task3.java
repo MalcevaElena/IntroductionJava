@@ -16,22 +16,25 @@ public class Task3 {
         sortArray(array);
         printArray(array);
     }
-    public static void sortArray (int [] arrays) {
+
+    public static void sortArray(int[] arrays) {
         for (int i = 0; i < arrays.length; i++) {
             int max = arrays[i];
             int index = i;
             for (int j = i + 1; j < arrays.length; j++) {
                 if (arrays[j] > max) {
                     max = arrays[j];
-                    index = j;}
+                    index = j;
+                }
             }
             arrays[index] = arrays[i];
             arrays[i] = max;
         }
     }
-    public static void printArray (int [] array) {
-        for (int i: array) {
-            System.out.printf("%2d\t",i);
+
+    public static void printArray(int[] array) {
+        for (int i : array) {
+            System.out.printf("%2d\t", i);
         }
         System.out.println();
     }

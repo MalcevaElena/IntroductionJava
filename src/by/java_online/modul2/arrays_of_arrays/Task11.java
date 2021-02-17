@@ -7,10 +7,10 @@ package by.java_online.modul2.arrays_of_arrays;
 
 public class Task11 {
     public static void main(String[] args) {
-        int [][] matrix = new int [10][20];
+        int[][] matrix = new int[10][20];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix [i][j] = (int) (Math.random()*15);
+                matrix[i][j] = (int) (Math.random() * 15);
             }
         }
         System.out.println("Дана матрица:");
@@ -19,22 +19,24 @@ public class Task11 {
         searchFive(matrix);
     }
 
-    public static void printMatrix (int [][] arrays){
+    public static void printMatrix(int[][] arrays) {
         for (int i = 0; i < arrays.length; i++) {
             for (int j = 0; j < arrays[i].length; j++) {
                 System.out.printf("%3d\t", arrays[i][j]);
             }
-        System.out.println();
+            System.out.println();
         }
     }
-    public static void searchFive(int [][] array){
+
+    public static void searchFive(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             int count = 0;
             for (int j = 0; j < array[i].length; j++) {
-                if (array[i][j]==5){
-                    count++;}
-                if (count>=3){
-                    System.out.print(i+1+", ");
+                if (array[i][j] == 5) {
+                    count++;
+                }
+                if (count >= 3) {
+                    System.out.print(i + 1 + ", ");
                     break;
                 }
             }

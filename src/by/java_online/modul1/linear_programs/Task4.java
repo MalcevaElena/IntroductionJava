@@ -7,10 +7,10 @@ package by.java_online.modul1.linear_programs;
 public class Task4 {
     public static void main(String[] args) {
         double r = 321.877;
-        int first = (int)r;
-        int second = (int)((r - first)*1000);
+        int first = (int) r;
+        int second = (int) ((r - first) * 1000);
         double result = second + first * 0.001;
-        System.out.println("Число R вида nnn.ddd: " + r );
+        System.out.println("Число R вида nnn.ddd: " + r);
         System.out.println("Измененное число: " + result);
     }
 }

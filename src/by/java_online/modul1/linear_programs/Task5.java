@@ -12,6 +12,6 @@ public class Task5 {
         int minutes = (time % 3600) / 60;
         int seconds = (time % 3600) % 60;
         System.out.println("Число Т = " + time);
-        System.out.println(hours+"ч "+ minutes+ "мин "+ seconds+ "c.");
+        System.out.println(hours + "ч " + minutes + "мин " + seconds + "c.");
     }
 }

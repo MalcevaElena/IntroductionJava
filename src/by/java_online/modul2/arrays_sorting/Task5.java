@@ -19,31 +19,35 @@ public class Task5 {
         sortArray(array);
         printArray(array);
     }
-    public static void sortArray (int [] arrays) {
+
+    public static void sortArray(int[] arrays) {
         int i = 3; // первые 3 значения уже отсортированы
         int key;
         for (; i < arrays.length; i++) {
-           //с помощью двоичного поиска, определяем в какую ячейку необходимо поместить эл-т
-           int index = binarySearch(arrays, i-1,  arrays[i]);
-           key = arrays[index]; // сохраняем значение переменной
-           arrays [index] = arrays [i];
-           int j = i - 1;
-           while (j >= 0 && arrays[j] > arrays[index]) { //сдвигаем элементы на один вправо
+            //с помощью двоичного поиска, определяем в какую ячейку необходимо поместить эл-т
+            int index = binarySearch(arrays, i - 1, arrays[i]);
+            key = arrays[index]; // сохраняем значение переменной
+            arrays[index] = arrays[i];
+            int j = i - 1;
+            while (j >= 0 && arrays[j] > arrays[index]) { //сдвигаем элементы на один вправо
                 arrays[j + 1] = arrays[j];
-                j --;
-                }
-           arrays[j + 1] = key; // в пустое место присваеваем значение сохраненной переменной
+                j--;
+            }
+            arrays[j + 1] = key; // в пустое место присваеваем значение сохраненной переменной
         }
     }
+
     public static int binarySearch(int arr[], int lastIndex, int elementToSearch) {
         int firstIndex = 0;
         if (elementToSearch < arr[firstIndex]) {
-            return firstIndex;}
-        if (elementToSearch > arr[lastIndex]){
-            return lastIndex+1;}
+            return firstIndex;
+        }
+        if (elementToSearch > arr[lastIndex]) {
+            return lastIndex + 1;
+        }
 
-        while(firstIndex <= lastIndex) {
-            int middleIndex = firstIndex + (lastIndex-firstIndex)/2;
+        while (firstIndex <= lastIndex) {
+            int middleIndex = firstIndex + (lastIndex - firstIndex) / 2;
             if (elementToSearch >= arr[middleIndex] && elementToSearch < arr[middleIndex + 1])
                 return middleIndex + 1;
             if (elementToSearch < arr[middleIndex])
@@ -54,9 +58,9 @@ public class Task5 {
         return -1;
     }
 
-    public static void printArray (int [] array) {
-        for (int i: array) {
-            System.out.printf("%2d\t",i);
+    public static void printArray(int[] array) {
+        for (int i : array) {
+            System.out.printf("%2d\t", i);
         }
         System.out.println();
     }

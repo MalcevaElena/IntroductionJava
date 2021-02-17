@@ -1,4 +1,5 @@
 package by.java_online.modul2.arrays_sorting;
+
 /* Сортировка обменами.
  * Дана последовательность чисел: a1, a2, ..., an.
  * Требуется переставить числа в порядке возрастания.
@@ -16,23 +17,26 @@ public class Task4 {
         sortArray(array);
         printArray(array);
     }
-    public static void sortArray (int [] arrays) {
+
+    public static void sortArray(int[] arrays) {
         int count = 0;
         int temp;
-        for (int i = 0; i < arrays.length-1; i++) {
+        for (int i = 0; i < arrays.length - 1; i++) {
             for (int j = i + 1; j < arrays.length; j++) {
                 if (arrays[j] < arrays[i]) {
                     temp = arrays[j];
-                    arrays [j] = arrays [i];
-                    arrays [i] = temp;
-                    count++;}
+                    arrays[j] = arrays[i];
+                    arrays[i] = temp;
+                    count++;
+                }
             }
         }
-        System.out.println("Количество перестановок: "+ count);
+        System.out.println("Количество перестановок: " + count);
     }
-    public static void printArray (int [] array) {
-        for (int i: array) {
-            System.out.printf("%2d\t",i);
+
+    public static void printArray(int[] array) {
+        for (int i : array) {
+            System.out.printf("%2d\t", i);
         }
         System.out.println();
     }
