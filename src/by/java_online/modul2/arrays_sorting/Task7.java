@@ -16,7 +16,8 @@ public class Task7 {
         System.out.println("Последовательность B: ");
         printArray(arrayB);
         System.out.println("Требуется указать те места, " +
-                " на которые нужно вставлять элементы последовательности B в A:");
+                " на которые нужно вставлять элементы последовательности B в A.");
+        System.out.println("C уже вставленных элементов:");
         index(arrayA, arrayB);
     }
 
@@ -24,10 +25,10 @@ public class Task7 {
         for (int i = 0; i < two.length; i++) {
             for (int j = 0; j < one.length; j++) {
                 if (two[i] < one[j]) {
-                    System.out.printf("%d елемент массива B вставим в %d элемент массива А.\n", i, j);
+                    System.out.printf("%d елемент массива B вставим в %d элемент массива А.\n", i, j+i);
                     break;
                 } else if (two[i] > one[one.length - 1]) {
-                    System.out.printf("%d елемент массива B вставим в %d элемент массива А.\n", i, one.length - 1);
+                    System.out.printf("%d елемент массива B вставим в %d элемент массива А.\n", i, one.length +i);
                     break;
                 }
             }
