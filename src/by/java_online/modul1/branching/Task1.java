@@ -5,9 +5,14 @@ package by.java_online.modul1.branching;
  */
 
 public class Task1 {
+
     public static void main(String[] args) {
-        double a = 45;
-        double b = 45;
+        int a;
+        int b;
+
+        a = 45;
+        b = 45;
+
         if ((a + b) < 180) {
             System.out.println("Треугольник существует.");
             if (a == 90 || b == 90 || a + b == 90) {

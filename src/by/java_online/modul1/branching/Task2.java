@@ -4,12 +4,18 @@ package by.java_online.modul1.branching;
 
 public class Task2 {
     public static void main(String[] args) {
-        int a = 9;
-        int b = 4;
-        int c = 6;
-        int d = 8;
-        System.out.println("max{min(" + a + ", " + b + "),min(" + c + ", " + d + ")} = " + max(min(a, b), min(c, d)));
-        //System.out.println("max{min("+a+", "+ b+"),min("+c+", "+d+")} = " + Math.max(Math.min(a,b),Math.min(c,d)));
+        int a;
+        int b;
+        int c;
+        int d;
+
+        a = 9;
+        b = 4;
+        c = 6;
+        d = 8;
+
+        System.out.println("max(min(" + a + ", " + b + "),min(" + c + ", " + d + ")) = "
+                + max(min(a, b), min(c, d)));
     }
 
     public static int min(int x, int y) {

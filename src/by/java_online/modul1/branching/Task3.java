@@ -6,14 +6,25 @@ package by.java_online.modul1.branching;
 
 public class Task3 {
     public static void main(String[] args) {
-        int x1 = 3;
-        int x2 = 5;
-        int x3 = 8;
-        int y1 = 6;
-        int y2 = 10;
-        int y3 = 16;
-        int firstValue = (x3 - x1) * (y2 - y1);
-        int secondValue = (y3 - y1) * (x2 - x1);
+        int x1;
+        int x2;
+        int x3;
+        int y1;
+        int y2;
+        int y3;
+        int firstValue;
+        int secondValue;
+
+        x1 = 3;
+        x2 = 5;
+        x3 = 8;
+        y1 = 6;
+        y2 = 10;
+        y3 = 16;
+
+        firstValue = (x3 - x1) * (y2 - y1);
+        secondValue = (y3 - y1) * (x2 - x1);
+
         if (firstValue == secondValue) {
             System.out.println("Три точки расположены на одной прямой.");
         } else {

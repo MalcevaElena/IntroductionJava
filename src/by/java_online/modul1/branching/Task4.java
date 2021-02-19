@@ -6,11 +6,18 @@ package by.java_online.modul1.branching;
 
 public class Task4 {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 5;
-        int x = 6;
-        int y = 9;
-        int z = 3;
+        int a;
+        int b;
+        int x;
+        int y;
+        int z;
+
+        a = 10;
+        b = 5;
+        x = 6;
+        y = 9;
+        z = 3;
+
         if (x <= a && y <= b || y <= a && x <= b) {
             System.out.println("Пройдет стороной Х/Y");
         }
