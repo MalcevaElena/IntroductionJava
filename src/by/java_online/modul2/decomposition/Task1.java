@@ -8,8 +8,13 @@ public class Task1 {
     public static void main(String[] args) {
         int a = 7;
         int b = 15;
-        int nod = nod(a, b);
-        int nok = nok(a, b);
+
+        int nod;
+        int nok;
+
+        nod = nod(a, b);
+        nok = nok(a, b);
+
         System.out.println("НОД и НОК для числе a="+a+" и b="+b+
                 ", равны " + nod + " и " + nok + " соответственно.");
     }

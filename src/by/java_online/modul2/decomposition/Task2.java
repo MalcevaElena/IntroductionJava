@@ -4,14 +4,19 @@ package by.java_online.modul2.decomposition;
 
 public class Task2 {
     public static void main(String[] args) {
+        int nodArray;
+
         int[] array = {12, 48, 18, 30};
+
         System.out.println("Даны четыре натуральных числа:");
         printArray(array);
 
-        int nodArray = array[0];
+        nodArray = array[0];
+
         for (int i = 1; i < array.length; i++) {
             nodArray = nod(nodArray, array[i]);
         }
+
         System.out.println("Наибольший общий делитель данных чисел равен: " + nodArray);
     }
 

@@ -7,8 +7,10 @@ package by.java_online.modul2.decomposition;
 public class Task3 {
     public static void main(String[] args) {
         double a = 5;
+        double s;
 
-        double s = Math.pow(a, 2) * Math.sqrt(3) / 4 * 6;
+        s = Math.pow(a, 2) * Math.sqrt(3) / 4 * 6;
+
         System.out.printf("Площадь правильного шестиугольника со стороной а="+a+" равна: %.2f",s);
     }
 }
