@@ -18,7 +18,7 @@ public class Task6 {
 
         result = checkNumber(one, two, three);
 
-        if (result == true) {
+        if (result) {
             System.out.println("Данные три числа являются взаимно простыми");
         }
         else {
@@ -37,11 +37,7 @@ public class Task6 {
         nod = nod(x, y);
         nod = nod(nod, z);
 
-        if (nod == 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return nod == 1;
     }
 
     public static int enterToConsole(String message) {
