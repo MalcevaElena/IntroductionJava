@@ -11,6 +11,7 @@ public class Task6 {
         int three;
         boolean result;
 
+        System.out.println("Введите 3 положительных числа.");
         one = enterToConsole("1:");
         two = enterToConsole("2:");
         three = enterToConsole("3: ");
