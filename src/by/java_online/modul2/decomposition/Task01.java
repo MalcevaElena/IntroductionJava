@@ -4,7 +4,7 @@ package by.java_online.modul2.decomposition;
  Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего общего кратного двух
 натуральных чисел:
  */
-public class Task1 {
+public class Task01 {
     public static void main(String[] args) {
         int a = 7;
         int b = 15;

@@ -5,7 +5,7 @@ package by.java_online.modul2.decomposition;
  * если угол между сторонами длиной X и Y— прямой.
  */
 
-public class Task9 {
+public class Task09 {
     public static void main(String[] args) {
         double x = 5;
         double y = 9;

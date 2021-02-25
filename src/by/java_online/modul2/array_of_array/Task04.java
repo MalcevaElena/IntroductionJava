@@ -5,7 +5,7 @@ package by.java_online.modul2.array_of_array;
  * {n, n-1, n-2,   ,1}
  */
 
-public class Task4 {
+public class Task04 {
     public static void main(String[] args) {
         int n = 8;
 

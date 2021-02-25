@@ -4,7 +4,7 @@ package by.java_online.modul2.decomposition;
 
 import java.util.Scanner;
 
-public class Task6 {
+public class Task06 {
     public static void main(String[] args) {
         int one;
         int two;

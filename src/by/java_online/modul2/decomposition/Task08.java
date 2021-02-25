@@ -6,7 +6,7 @@ package by.java_online.modul2.decomposition;
  * трех последовательно расположенных элементов массива с номерами от k до m.
  */
 
-public class Task8 {
+public class Task08 {
     public static void main(String[] args) {
         int[] array = new int[]{10, 41, 22, 63, 14, 35, 55};
 

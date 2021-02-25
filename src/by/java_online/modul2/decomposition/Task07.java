@@ -2,7 +2,7 @@ package by.java_online.modul2.decomposition;
 
 //Написать метод(методы) для вычисления суммы факториалов всех нечетных чисел от 1 до 9.
 
-public class Task7 {
+public class Task07 {
     public static void main(String[] args) {
         int sum = 0;
 

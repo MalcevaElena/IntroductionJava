@@ -4,7 +4,7 @@ package by.java_online.modul2.decomposition;
  * Написать метод(методы), определяющие, между какими из пар точек самое большое расстояние.
  * Указание. Координаты точек занести в массив.
  */
-public class Task4 {
+public class Task04 {
     public static void main(String[] args) {
         int n = 5;
         double distance;

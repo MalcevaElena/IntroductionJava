@@ -2,7 +2,7 @@ package by.java_online.modul2.decomposition;
 
 // Написать метод(методы) для нахождения наибольшего общего делителя четырех натуральных чисел.
 
-public class Task2 {
+public class Task02 {
     public static void main(String[] args) {
         int nodArray;
 

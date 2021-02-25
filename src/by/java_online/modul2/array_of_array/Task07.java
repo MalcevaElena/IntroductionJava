@@ -4,7 +4,7 @@ package by.java_online.modul2.array_of_array;
  * A [I,J] = sin ((I^2-J^2)/N)
  * и подсчитать количество положительных элементов в ней.
  */
-public class Task7 {
+public class Task07 {
     public static void main(String[] args) {
         int n = 6;
         int count = 0;

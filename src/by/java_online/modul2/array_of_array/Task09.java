@@ -4,7 +4,7 @@ package by.java_online.modul2.array_of_array;
  * Посчитать сумму элементов в каждом столбце.
  * Определить, какой столбец содержит максимальную сумму.
  */
-public class Task9 {
+public class Task09 {
     public static void main(String[] args) {
         int n = 5;
         int indexMax;

@@ -7,7 +7,7 @@ import java.util.Random;
  * (вывести на печать число, которое меньше максимального элемента массива,
  *  но больше всех других элементов).
  */
-public class Task5 {
+public class Task05 {
     public static void main(String[] args) {
         int n = 7;
         int number;

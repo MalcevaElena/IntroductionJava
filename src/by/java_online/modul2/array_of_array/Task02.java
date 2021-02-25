@@ -1,10 +1,10 @@
 package by.java_online.modul2.array_of_array;
 
-// Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
+// Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
 
-public class Task1 {
+public class Task02 {
     public static void main(String[] args) {
-        int[][] matrix = new int[4][15];
+        int[][] matrix = new int[9][9];
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -12,12 +12,11 @@ public class Task1 {
             }
         }
 
-        System.out.println("Дана матрица:");
+        System.out.println("Дана квадратная матрица:");
         printMatrix(matrix);
 
-        System.out.println("Вывести на экран все нечетные столбцы," +
-                " у которых первый элемент больше последнего.");
-        printOddColumn(matrix);
+        System.out.println("Вывести на экран элементы, стоящие на диагонали.");
+        printDiagonal(matrix);
     }
 
     public static void printMatrix(int[][] arrays) {
@@ -29,12 +28,12 @@ public class Task1 {
         }
     }
 
-    public static void printOddColumn(int[][] array) {
+    public static void printDiagonal(int[][] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j += 2) {
-                if (array[0][j] > array[array.length - 1][j]) {
+            for (int j = 0; j < array.length; j++) {
+                if (i == j || j == array.length - 1 - i) {
                     System.out.printf("%3d\t", array[i][j]);
-                }
+                } else System.out.print("    ");
             }
             System.out.println();
         }

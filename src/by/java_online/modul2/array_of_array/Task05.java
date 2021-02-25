@@ -1,32 +1,23 @@
 package by.java_online.modul2.array_of_array;
 
 /* Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
- * {1 1 1 1 1 1}
- * {0 1 1 1 1 0}
- * {0 0 1 1 0 0}
- * {0 0 1 1 0 0}
- * {0 1 1 1 1 0}
- * {1 1 1 1 1 1}
+ * { 1 1 1 1 }
+ * { 2 2 2 0 }
+ * { 3 3 0 0 }
+ * { 4 0 0 0 }
  */
-public class Task6 {
+public class Task05 {
     public static void main(String[] args) {
-        int n = 6;
+        int n = 8;
 
         int[][] matrix = new int[n][n];
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = 1;
-                if (i > 0 && i < matrix.length / 2) {
+                matrix[i][j] = i + 1;
+                if (i > 0) {
                     for (int h = i; h > 0; h--) {
                         matrix[i][matrix[i].length - h] = 0;
-                        matrix[i][h - 1] = 0;
-                    }
-                }
-                if (i >= matrix.length / 2) {
-                    for (int h = 0; h < matrix.length - i - 1; h++) {
-                        matrix[i][matrix[i].length - 1 - h] = 0;
-                        matrix[i][h] = 0;
                     }
                 }
             }

@@ -1,13 +1,10 @@
 package by.java_online.modul2.array_of_array;
 
-// Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
+// Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
 
-public class Task3 {
-    private static int k;
-    private static int p;
-
+public class Task01 {
     public static void main(String[] args) {
-        int[][] matrix = new int[5][5];
+        int[][] matrix = new int[4][15];
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -18,11 +15,9 @@ public class Task3 {
         System.out.println("Дана матрица:");
         printMatrix(matrix);
 
-        k = (int) (Math.random() * 5);
-        p = (int) (Math.random() * 5);
-
-        System.out.println("Вывести " + k + "-ю строку и " + p + "-й столбец матрицы.");
-        printResult(matrix);
+        System.out.println("Вывести на экран все нечетные столбцы," +
+                " у которых первый элемент больше последнего.");
+        printOddColumn(matrix);
     }
 
     public static void printMatrix(int[][] arrays) {
@@ -34,15 +29,14 @@ public class Task3 {
         }
     }
 
-    public static void printResult(int[][] array) {
+    public static void printOddColumn(int[][] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (i == k - 1 || j == p - 1) {
+            for (int j = 0; j < array[i].length; j += 2) {
+                if (array[0][j] > array[array.length - 1][j]) {
                     System.out.printf("%3d\t", array[i][j]);
-                } else System.out.print("    ");
+                }
             }
             System.out.println();
         }
     }
 }
-

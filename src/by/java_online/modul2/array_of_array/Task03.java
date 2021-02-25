@@ -1,10 +1,13 @@
 package by.java_online.modul2.array_of_array;
 
-// Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали.
+// Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
 
-public class Task2 {
+public class Task03 {
+    private static int k;
+    private static int p;
+
     public static void main(String[] args) {
-        int[][] matrix = new int[9][9];
+        int[][] matrix = new int[5][5];
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -12,11 +15,14 @@ public class Task2 {
             }
         }
 
-        System.out.println("Дана квадратная матрица:");
+        System.out.println("Дана матрица:");
         printMatrix(matrix);
 
-        System.out.println("Вывести на экран элементы, стоящие на диагонали.");
-        printDiagonal(matrix);
+        k = (int) (Math.random() * 5);
+        p = (int) (Math.random() * 5);
+
+        System.out.println("Вывести " + k + "-ю строку и " + p + "-й столбец матрицы.");
+        printResult(matrix);
     }
 
     public static void printMatrix(int[][] arrays) {
@@ -28,10 +34,10 @@ public class Task2 {
         }
     }
 
-    public static void printDiagonal(int[][] array) {
+    public static void printResult(int[][] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                if (i == j || j == array.length - 1 - i) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i == k - 1 || j == p - 1) {
                     System.out.printf("%3d\t", array[i][j]);
                 } else System.out.print("    ");
             }
@@ -39,3 +45,4 @@ public class Task2 {
         }
     }
 }
+

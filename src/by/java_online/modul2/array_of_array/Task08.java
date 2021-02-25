@@ -8,7 +8,7 @@ package by.java_online.modul2.array_of_array;
 
 import java.util.Scanner;
 
-public class Task8 {
+public class Task08 {
     private static final int n = 5;
 
     public static void main(String[] args) {

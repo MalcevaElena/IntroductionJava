@@ -4,7 +4,7 @@ package by.java_online.modul2.decomposition;
  * Вычислить площадь правильного шестиугольника со стороной а,
  * используя метод вычисления площади треугольника.
  */
-public class Task3 {
+public class Task03 {
     public static void main(String[] args) {
         double a = 5;
         double s;
