@@ -24,9 +24,9 @@ public class Task14 {
         int numberArmstrong;
 
 
-        for (int i = 1; i < number; i++) { // роверяем числа от 1 до К
-            x=i;
-            numberArmstrong =0;
+        for (int i = 1; i <= number; i++) { // роверяем числа от 1 до К
+            x = i;
+            numberArmstrong = 0;
             elementNumber = new int[sizeArray(x)];
 
             for (int j = 0; j < elementNumber.length; j++) { // разбиваем число на элементы и записываем в массив
@@ -39,13 +39,13 @@ public class Task14 {
             }
 
             if (numberArmstrong == i) {
-                System.out.print(+ i + ", ");
+                System.out.print(+i + ", ");
             }
         }
     }
 
-    public static int searchNumber (int x, int length) {
-        return  (int) Math.pow(x, length);
+    public static int searchNumber(int x, int length) {
+        return (int) Math.pow(x, length);
 
     }
 
