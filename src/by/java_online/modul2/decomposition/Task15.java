@@ -14,7 +14,7 @@ public class Task15 {
         int x;
         int[] elementNumber;
 
-        n = enterToConsole("n, где n-значность числа");
+        n = enterToConsole("n, где n-значность числа от 2 до 9");
         min = minNumber(n);
         max = maxNumber(n);
 
@@ -78,7 +78,7 @@ public class Task15 {
             }
             number = sc.nextInt();
         }
-        while (number <= 0);
+        while (number <= 1 || number > 9);
 
         return number;
     }
