@@ -4,34 +4,38 @@ package by.java_online.modul2.array_sorting;
  * Составить программу, которая приводит эти дроби к общему
  * знаменателю и упорядочивает их в порядке возрастания.
  */
+
 public class Task8 {
+
     public static void main(String[] args) {
         int nod;
 
-        int[] arrayP = {2, 5, 6, 3, 7, 1}; //массив числителей
-        int[] arrayQ = {4, 6, 8, 3, 6, 2}; //массив знаменателей
+        Fraction[] fractions = new Fraction[6];
+        for (int i = 0; i < fractions.length; i++) {
+            fractions[i] = new Fraction((int) (Math.random() * 8) + 1, (int) (Math.random() * 8 + 1));
+        }
 
         System.out.println("Даны дроби: ");
-        printArray(arrayP, arrayQ);
+        printArray(fractions);
 
-        nod = commonDenominator(arrayQ);
+        nod = commonDenominator(fractions);
 
         System.out.println("Общий знаменатель: " + nod);
-        numerator(arrayP, arrayQ, nod);
-        sortArray(arrayP);
+        numerator(fractions, nod);
+        sortArray(fractions);
 
         System.out.println("Привести дроби к общему знаменателю, и упорядочить в порядке возрастания:");
-        printArray(arrayP, nod);
+        printArray(fractions);
 
     }
 
-    public static int commonDenominator(int[] arr) {
+    public static int commonDenominator(Fraction[] arr) {
         // Находим общий знаменатель
-        int denominator = 1;
+        int denom = 1;
         for (int i = 0; i < arr.length; i++) {
-            denominator = nok(denominator, arr[i]);
+            denom = nok(denom, arr[i].denominator);
         }
-        return denominator;
+        return denom;
     }
 
     public static int nod(int a, int b) {
@@ -42,37 +46,42 @@ public class Task8 {
         return a / nod(a, b) * b;
     }
 
-    public static void numerator(int[] one, int[] two, int denominator) {
+    public static void numerator(Fraction[] fr, int nod) {
         //приводим числители к общему знаменателю
-        for (int i = 0; i < one.length; i++) {
-            one[i] = denominator / two[i] * one[i];
+        for (int i = 0; i < fr.length; i++) {
+            fr[i].numerator = nod / fr[i].denominator * fr[i].numerator;
+            fr[i].denominator = nod;
         }
     }
 
-    public static void sortArray(int[] one) {
+    public static void sortArray(Fraction[] fract) {
         int tmp;
-        for (int i = 0; i < one.length - 1; i++) {
-            for (int j = one.length - 1; j > i; j--) {
-                if (one[j - 1] > one[j]) {
-                    tmp = one[j - 1];
-                    one[j - 1] = one[j];
-                    one[j] = tmp;
+        for (int i = 0; i < fract.length - 1; i++) {
+            for (int j = fract.length - 1; j > i; j--) {
+                if (fract[j - 1].numerator > fract[j].numerator) {
+                    tmp = fract[j - 1].numerator;
+                    fract[j - 1].numerator = fract[j].numerator;
+                    fract[j].numerator = tmp;
                 }
             }
         }
     }
 
-    public static void printArray(int[] arr, int one) {
-        for (int i : arr) {
-            System.out.printf("%2d/%d\t", i, one);
-        }
-        System.out.println();
-    }
-
-    public static void printArray(int[] arrP, int[] arrQ) {
-        for (int i = 0; i < arrP.length; i++) {
-            System.out.printf("%2d/%d\t", arrP[i], arrQ[i]);
+    public static void printArray(Fraction[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf("%2d/%d\t", arr[i].numerator, arr[i].denominator);
         }
         System.out.println();
     }
 }
+
+class Fraction {
+    public int numerator;
+    public int denominator;
+
+    Fraction(int numerator, int denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
+    }
+}
+
