@@ -5,57 +5,55 @@ package by.java_online.modul2.decomposition;
  * являются числа, сумма цифр которых равна К и которые не большее N.
  */
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Task12 {
     public static int n;
     public static int k;
-    public static ArrayList<Integer> list = new ArrayList<>();
+    public static int[] array = new int[1];
 
     public static void main(String[] args) {
-        int[] array;
-
         k = enterToConsole("K");
         n = enterToConsole("N");
 
-        listFormation();
-
-        array = new int[list.size()];
+        arrayFormation();
 
         System.out.println("Массив А, элементами которого являются числа," +
-                " сумма цифр которых равна К и которые не большее N.");
-        for (int i = 0; i < array.length; i++) {
-            array[i] = list.get(i);
-            System.out.print(array[i] + ", ");
+                " сумма цифр которых равна " + k + " и которые не большее " + n + ".");
+
+        for (int j : array) {
+            System.out.print(j + ", ");
         }
     }
 
-    public static void listFormation() {
+    public static void arrayFormation() {
         int element;
         int sumElement = 0;
+        int countSizeArray = 0;
 
-        for (int i = 0; i < k; i++) {
-            element = element();
-            sumElement += element;
+        for (int i = 1; i < n; i++) {
+            if (i < 10) {
+                sumElement = i;
+            } else {
+                element = i;
+                while (element != 0) {
+                    sumElement += element % 10;
+                    element /= 10;
+                }
+            }
 
             if (sumElement == k) {
-                list.add(element);
-                break;
-            } else if (sumElement > k) {
-                sumElement -= element;
-            } else {
-                list.add(element);
+                if (countSizeArray > 0) { // если длина массива больше 1
+                    int[] arrayA = new int[countSizeArray + 1]; //создаем нвый массив на 1 больше
+                    for (int j = 0; j < arrayA.length - 1; j++) { // копируем значения из одного массива в другой
+                        arrayA[j] = array[j];
+                    }
+                    array = arrayA; // передаем ссылку на новый массив
+                }
+                array[countSizeArray] = i;
+                countSizeArray++;
             }
-        }
-    }
-
-    public static int element() {
-        int rand = (int) (Math.random() * n - 1);
-        if (rand > 0) {
-            return rand;
-        } else {
-            return 1;
+            sumElement = 0;
         }
     }
 
