@@ -4,14 +4,15 @@ package by.java_online.modul3.string_stringbuilder;
 
 public class Task1 {
     public static void main(String[] args) {
-        String string = "Три  девицы под окном\n" +
-                "Пряли   поздно    вечерком.\n" +
-                "Кабы  я была    царица,\n" +
-                "Говорит  одна        девица,\n" +
-                "То  на   весь  крещеный   мир\n" +
-                "Приготовила  б   я    пир».";
+        int numberOfSpace;
+        String string;
 
-        int numberOfSpace = space(string);
+        string = "Три  девицы под окном Пряли   поздно    вечерком." +
+                "Кабы  я была    царица, Говорит  одна        девица," +
+                "То  на   весь  крещеный   мир Приготовила  б   я    пир».";
+
+        numberOfSpace = space(string);
+
         System.out.println("Наибольшее кол-во подряд идущих пробелов: " + numberOfSpace);
     }
 
