@@ -10,7 +10,10 @@ import java.util.regex.Pattern;
 
 public class Task2 {
     public static void main(String[] args) {
-        String xml = "<notes>\n" +
+        String xml;
+        String analysis;
+
+        xml =   "<notes>\n" +
                 "    <note id = \"1\">\n" +
                 "        <to>Вася</to>\n" +
                 "        <from>Света</from>\n" +
@@ -25,7 +28,7 @@ public class Task2 {
                 "    </note>\n" +
                 " </notes> \n";
 
-        String analysis = analyzer(xml);
+        analysis = analyzer(xml);
         System.out.println(analysis);
 
     }
