@@ -13,7 +13,7 @@ public class Task2 {
         String xml;
         String analysis;
 
-        xml =   "<notes>\n" +
+        xml = "<notes>\n" +
                 "    <note id = \"1\">\n" +
                 "        <to>Вася</to>\n" +
                 "        <from>Света</from>\n" +
@@ -30,7 +30,6 @@ public class Task2 {
 
         analysis = analyzer(xml);
         System.out.println(analysis);
-
     }
 
     public static String analyzer(String str) {
