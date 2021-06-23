@@ -15,11 +15,11 @@ public class Main {
 
         Counter decimalCounter = new Counter(min);
         Show.showCounter(decimalCounter);
-        decimalCounter.setCounter(LogicCounter.increment(decimalCounter.getCounter(),max));
+        decimalCounter.setCounter(LogicCounter.increment(decimalCounter.getCounter(), max));
         Show.showCounter(decimalCounter);
-        decimalCounter.setCounter (LogicCounter.decrement((decimalCounter.getCounter()),min));
+        decimalCounter.setCounter(LogicCounter.decrement((decimalCounter.getCounter()), min));
         Show.showCounter(decimalCounter);
-        decimalCounter.setCounter (LogicCounter.decrement((decimalCounter.getCounter()),min));
+        decimalCounter.setCounter(LogicCounter.decrement((decimalCounter.getCounter()), min));
         Show.showCounter(decimalCounter);
     }
 }

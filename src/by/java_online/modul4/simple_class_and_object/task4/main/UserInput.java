@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class UserInput {
 
-    public static int enterToConsole(List <Train> trains) {
+    public static int enterToConsole(List<Train> trains) {
 
         @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);

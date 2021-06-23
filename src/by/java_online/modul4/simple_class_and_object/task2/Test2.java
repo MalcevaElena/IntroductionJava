@@ -14,7 +14,7 @@ public class Test2 {
         this.age = 0;
     }
 
-    public Test2 (String name, int age){
+    public Test2(String name, int age) {
         this.name = name;
         this.age = age;
     }

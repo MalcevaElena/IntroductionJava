@@ -8,7 +8,7 @@ package by.java_online.modul4.simple_class_and_object.task6;
  */
 public class Main {
     public static void main(String[] args) {
-        Time time = new Time(27,66,77);
+        Time time = new Time(27, 66, 77);
         ShowTime.printTime(time);
         TimeLogic.settingHour(time, 2);
         ShowTime.printTime(time);
@@ -16,7 +16,7 @@ public class Main {
         ShowTime.printTime(time);
         TimeLogic.settingSecond(time, 45);
         ShowTime.printTime(time);
-        TimeLogic.settingTime(time, 5,40,23);
+        TimeLogic.settingTime(time, 5, 40, 23);
         ShowTime.printTime(time);
     }
 }

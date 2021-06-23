@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TrainView {
 
-    public static void printTrain(List <Train> trains) {
+    public static void printTrain(List<Train> trains) {
         for (Train t : trains) {
             System.out.println(t);
         }

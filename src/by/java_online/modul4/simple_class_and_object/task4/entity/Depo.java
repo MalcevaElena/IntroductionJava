@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Depo {
     private List<Train> trains;
+
     {
         trains = new ArrayList<Train>();
     }

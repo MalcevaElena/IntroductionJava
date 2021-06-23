@@ -11,11 +11,10 @@ public class LogicCounter {
     }
 
     public static int decrement(int number, int min) {
-            if (number==min){
-                return number;
-            }
-            else {
-                return --number;
-            }
+        if (number == min) {
+            return number;
+        } else {
+            return --number;
         }
+    }
 }

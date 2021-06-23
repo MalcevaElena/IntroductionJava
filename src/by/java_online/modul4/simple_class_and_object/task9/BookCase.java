@@ -5,11 +5,11 @@ import java.util.List;
 
 public class BookCase {
     private String name;
-    private List <Book> books;
+    private List<Book> books;
 
-    public BookCase(List <Book> books) {
+    public BookCase(List<Book> books) {
         this.name = "Детективы";
-        this.books=books;
+        this.books = books;
     }
 
     public BookCase(String name, List<Book> books) {
@@ -17,8 +17,8 @@ public class BookCase {
         this.books = books;
     }
 
-    public void booksAdd (String title, String author, String publishingHouse, int year,
-                          int numberOfPages, int price, String bindingType){
+    public void booksAdd(String title, String author, String publishingHouse, int year,
+                         int numberOfPages, int price, String bindingType) {
         this.books.add(new Book(title, author, publishingHouse, year, numberOfPages, price, bindingType));
     }
 
@@ -38,30 +38,30 @@ public class BookCase {
         this.books = books;
     }
 
-    public List<Book> searchByAuthor (String author){
-        List <Book> result = new ArrayList<>();
+    public List<Book> searchByAuthor(String author) {
+        List<Book> result = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
-            if (books.get(i).getAuthor().equals(author)){
+            if (books.get(i).getAuthor().equals(author)) {
                 result.add(books.get(i));
             }
         }
         return result;
     }
 
-    public  List <Book> searchByPublishingHouse (String publishingHouse) {
-        List <Book> result = new ArrayList<>();
+    public List<Book> searchByPublishingHouse(String publishingHouse) {
+        List<Book> result = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
-            if (books.get(i).getPublishingHouse().equals(publishingHouse)){
+            if (books.get(i).getPublishingHouse().equals(publishingHouse)) {
                 result.add(books.get(i));
             }
         }
         return result;
     }
 
-    public  List <Book> searchByYear (int year) {
-        List <Book> result = new ArrayList<>();
+    public List<Book> searchByYear(int year) {
+        List<Book> result = new ArrayList<>();
         for (int i = 0; i < books.size(); i++) {
-            if (books.get(i).getYear()>year){
+            if (books.get(i).getYear() > year) {
                 result.add(books.get(i));
             }
         }

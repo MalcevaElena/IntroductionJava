@@ -8,10 +8,10 @@ public class Customer {
     private String patronymic;
     private String address;
     private int cardNumber;
-    private long  bankAccountNumber;
+    private long bankAccountNumber;
 
     Customer(String lastName, String firstName, String patronymic, String address,
-             int  cardNumber, long bankAccountNumber) {
+             int cardNumber, long bankAccountNumber) {
         this.id = startID++;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -69,7 +69,7 @@ public class Customer {
         return cardNumber;
     }
 
-    public void setCardNumber(int  cardNumber) {
+    public void setCardNumber(int cardNumber) {
         this.cardNumber = cardNumber;
     }
 
@@ -77,7 +77,7 @@ public class Customer {
         return bankAccountNumber;
     }
 
-    public void setBankAccountNumber(long  bankAccountNumber) {
+    public void setBankAccountNumber(long bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
     }
 }

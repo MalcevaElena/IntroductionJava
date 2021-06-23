@@ -55,13 +55,13 @@ public class Student {
         for (int i = 0; i < students.length; i++) {
             students[i] = new Student("Иванов" + i, 20 + i);
             for (int j = 0; j < students[i].academicPerformance.length; j++) {
-                students[i].academicPerformance[j] = (int) (Math.random() * 3 +8 );
+                students[i].academicPerformance[j] = (int) (Math.random() * 3 + 8);
             }
 
         }
         System.out.println("Все студенты:");
         for (Student st : students) {
-            System.out.println("ФИО студента:" + st.lastNameAndInitials + ", номер группы: " + st.numberGroup+ Arrays.toString(st.academicPerformance));
+            System.out.println("ФИО студента:" + st.lastNameAndInitials + ", номер группы: " + st.numberGroup + Arrays.toString(st.academicPerformance));
         }
         System.out.println("Отличники");
         for (Student st : students) {

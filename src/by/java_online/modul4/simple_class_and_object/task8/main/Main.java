@@ -34,14 +34,14 @@ public class Main {
 
 
         System.out.println("sort by name:");
-        List <Customer> listSortByName = CustomerLogic.sortName(vipCustomer);
+        List<Customer> listSortByName = CustomerLogic.sortName(vipCustomer);
         System.out.println("Группа клиентов: " + vipCustomer.getNameGroup());
         CustomerBaseShow.printCustomerBase(listSortByName);
 
         System.out.println();
         List<Customer> listSortByRangeCreditCard =
                 CustomerLogic.rangeCreditCard(vipCustomer, 4200_0000, 5000_0000);
-        System.out.println("Группа клиентов: " + vipCustomer.getNameGroup()+ " с диапазоном кредитных карт от 4200 до 5000");
+        System.out.println("Группа клиентов: " + vipCustomer.getNameGroup() + " с диапазоном кредитных карт от 4200 до 5000");
         CustomerBaseShow.printCustomerBase(listSortByRangeCreditCard);
     }
 }

@@ -16,8 +16,8 @@ public class CustomerBase {
         this.customerBase = customerBase;
     }
 
-    public void addCustomerBase (String lastName, String firstName, String patronymic,
-                                 String address, int cardNumber, long bankAccountNumber) {
+    public void addCustomerBase(String lastName, String firstName, String patronymic,
+                                String address, int cardNumber, long bankAccountNumber) {
         this.customerBase.add(new Customer(lastName, firstName, patronymic, address, cardNumber, bankAccountNumber));
     }
 

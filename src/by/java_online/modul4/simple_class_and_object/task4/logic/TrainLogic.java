@@ -80,7 +80,7 @@ public class TrainLogic {
 
         //сортировка по времени отправления у поездов с одинаковым пунктом назначения
         for (int i = 0; i < sortTrain.size() - 1; i++) {
-            for (int j = i+1; j < sortTrain.size(); j++) {
+            for (int j = i + 1; j < sortTrain.size(); j++) {
 
                 if (sortTrain.get(i).getDestination() == sortTrain.get(j).getDestination()) {
                     timeOne = sortTrain.get(i).getDepartureTime().getHour() * 60 + sortTrain.get(i).getDepartureTime().getMinute();

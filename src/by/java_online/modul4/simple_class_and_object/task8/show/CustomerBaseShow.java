@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CustomerBaseShow {
 
-    public static void printCustomerBase (List <Customer> list){
+    public static void printCustomerBase(List<Customer> list) {
         for (Customer customer : list) {
             System.out.println(customer);
         }
