@@ -46,7 +46,7 @@ public class Student {
                 count++;
             }
         }
-        return count > 0 ? false : true;
+        return count == 0 ? true: false;
     }
 
     public static void main(String[] args) {

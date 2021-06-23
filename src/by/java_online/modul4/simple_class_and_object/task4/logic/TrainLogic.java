@@ -7,7 +7,7 @@ import java.util.*;
 public class TrainLogic {
 
     public static List<Train> sortTrainNumber(List<Train> trains) {
-        List<Train> sortTrain = new ArrayList<Train>();
+        List<Train> sortTrain = new ArrayList<>();
         sortTrain.addAll(trains);
         Train tpm;
         for (int i = 0; i < sortTrain.size(); i++) {
@@ -34,7 +34,7 @@ public class TrainLogic {
     }
 
     public static List<Train> sortDestination(List<Train> trains) {
-        List<Train> sortTrain = new ArrayList<Train>();
+        List<Train> sortTrain = new ArrayList<>();
         sortTrain.addAll(trains);
 
         int timeOne = 0;
@@ -82,7 +82,7 @@ public class TrainLogic {
         for (int i = 0; i < sortTrain.size() - 1; i++) {
             for (int j = i + 1; j < sortTrain.size(); j++) {
 
-                if (sortTrain.get(i).getDestination() == sortTrain.get(j).getDestination()) {
+                if (sortTrain.get(i).getDestination().equals(sortTrain.get(j).getDestination())) {
                     timeOne = sortTrain.get(i).getDepartureTime().getHour() * 60 + sortTrain.get(i).getDepartureTime().getMinute();
                     timeTwo = sortTrain.get(j).getDepartureTime().getHour() * 60 + sortTrain.get(j).getDepartureTime().getMinute();
                     if (timeOne > timeTwo) {

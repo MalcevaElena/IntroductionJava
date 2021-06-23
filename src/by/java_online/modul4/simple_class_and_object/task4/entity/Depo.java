@@ -7,7 +7,7 @@ public class Depo {
     private List<Train> trains;
 
     {
-        trains = new ArrayList<Train>();
+        trains = new ArrayList<>();
     }
 
     public Depo() {
