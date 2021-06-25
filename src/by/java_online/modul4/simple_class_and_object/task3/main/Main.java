@@ -6,7 +6,7 @@ package by.java_online.modul4.simple_class_and_object.task3.main;
  */
 
 
-import by.java_online.modul4.simple_class_and_object.task3.Show.View;
+import by.java_online.modul4.simple_class_and_object.task3.show.View;
 import by.java_online.modul4.simple_class_and_object.task3.entity.Group;
 import by.java_online.modul4.simple_class_and_object.task3.entity.Student;
 import by.java_online.modul4.simple_class_and_object.task3.logic.GroupLogic;
