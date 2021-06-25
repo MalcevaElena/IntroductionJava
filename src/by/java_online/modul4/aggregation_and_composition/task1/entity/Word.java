@@ -1,4 +1,4 @@
-package by.java_online.modul4.aggregation_and_composition.task1;
+package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
 public class Word {
     private String value;
@@ -34,6 +34,7 @@ public class Word {
 
     @Override
     public String toString() {
-        return value;
+        return "Word{ value= " + value + " }";
     }
 }
+

@@ -1,4 +1,4 @@
-package by.java_online.modul4.aggregation_and_composition.task1;
+package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,13 +53,13 @@ public class Text {
         result += 37 * result + header.hashCode();
 
         for (int i = 0; i < body.size(); i++) {
-            result += 37 * result + body.get(i).getSentenceList().hashCode();
+            result += 37 * result + body.get(i).hashCode();
         }
         return result;
     }
 
     @Override
     public String toString() {
-        return header.toString() + body;
+        return "Text{ header = " + header +", body = " + body +" }";
     }
 }

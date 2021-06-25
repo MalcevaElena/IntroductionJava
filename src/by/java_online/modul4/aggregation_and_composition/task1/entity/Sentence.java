@@ -1,4 +1,4 @@
-package by.java_online.modul4.aggregation_and_composition.task1;
+package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
 import java.util.Objects;
 
@@ -32,6 +32,6 @@ public class Sentence {
 
     @Override
     public String toString() {
-        return sentenceList.toString();
+        return "Sentence { sentenceList = " + sentenceList + " }";
     }
 }
