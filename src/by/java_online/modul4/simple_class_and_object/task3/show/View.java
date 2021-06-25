@@ -1,4 +1,4 @@
-package by.java_online.modul4.simple_class_and_object.task3.Show;
+package by.java_online.modul4.simple_class_and_object.task3.show;
 
 import by.java_online.modul4.simple_class_and_object.task3.entity.Group;
 import by.java_online.modul4.simple_class_and_object.task3.entity.Student;
