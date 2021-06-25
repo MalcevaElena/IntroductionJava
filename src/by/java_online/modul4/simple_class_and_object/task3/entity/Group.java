@@ -1,4 +1,4 @@
-package by.java_online.modul4.simple_class_and_object.task3;
+package by.java_online.modul4.simple_class_and_object.task3.entity;
 
 import java.util.ArrayList;
 import java.util.List;

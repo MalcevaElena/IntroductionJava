@@ -1,10 +1,16 @@
-package by.java_online.modul4.simple_class_and_object.task3;
+package by.java_online.modul4.simple_class_and_object.task3.main;
 /* Создайте класс с именем Student, содержащий поля:
  * фамилия и инициалы, номер группы, успеваемость (массив из пяти элементов).
  * Создайте массив из десяти элементов такого типа.
  * Добавьте возможность вывода фамилий и номеров групп студентов, имеющих оценки, равные только 9 или 10.
  */
 
+
+import by.java_online.modul4.simple_class_and_object.task3.Show.View;
+import by.java_online.modul4.simple_class_and_object.task3.entity.Group;
+import by.java_online.modul4.simple_class_and_object.task3.entity.Student;
+import by.java_online.modul4.simple_class_and_object.task3.logic.GroupLogic;
+import by.java_online.modul4.simple_class_and_object.task3.logic.StudentLogic;
 
 import java.util.List;
 
