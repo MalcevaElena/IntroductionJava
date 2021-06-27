@@ -50,9 +50,29 @@ public class Train {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Train train = (Train) o;
+
+        if (trainNumber != train.trainNumber) return false;
+        if (destination != null ? !destination.equals(train.destination) : train.destination != null) return false;
+        return departureTime != null ? departureTime.equals(train.departureTime) : train.departureTime == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = destination != null ? destination.hashCode() : 0;
+        result = 31 * result + trainNumber;
+        result = 31 * result + (departureTime != null ? departureTime.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Пункт назначения: " + getDestination() +
                 ", Номер поезда " + getTrainNumber() + ", Время отправления: " + getDepartureTime();
     }
-    // equals and hashcode
+
 }

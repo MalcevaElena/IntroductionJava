@@ -88,6 +88,37 @@ public class Book {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Book book = (Book) o;
+
+        if (id != book.id) return false;
+        if (year != book.year) return false;
+        if (numberOfPages != book.numberOfPages) return false;
+        if (price != book.price) return false;
+        if (title != null ? !title.equals(book.title) : book.title != null) return false;
+        if (author != null ? !author.equals(book.author) : book.author != null) return false;
+        if (publishingHouse != null ? !publishingHouse.equals(book.publishingHouse) : book.publishingHouse != null)
+            return false;
+        return bindingType != null ? bindingType.equals(book.bindingType) : book.bindingType == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (title != null ? title.hashCode() : 0);
+        result = 31 * result + (author != null ? author.hashCode() : 0);
+        result = 31 * result + (publishingHouse != null ? publishingHouse.hashCode() : 0);
+        result = 31 * result + year;
+        result = 31 * result + numberOfPages;
+        result = 31 * result + price;
+        result = 31 * result + (bindingType != null ? bindingType.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return String.format("id: %d, Title: %s, Author: %s, PublishingHouse: %s, " +
                         "Year: %d, NumberOfPages: %d, Price: %s, BindingType: %s."

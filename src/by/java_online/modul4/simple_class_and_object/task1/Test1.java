@@ -41,4 +41,28 @@ public class Test1 {
     public void setNumberTwo(int numberTwo) {
         this.numberTwo = numberTwo;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Test1 test1 = (Test1) o;
+
+        if (numberOne != test1.numberOne) return false;
+        return numberTwo == test1.numberTwo;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = numberOne;
+        result = 31 * result + numberTwo;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Test1 { numberOne = " + numberOne +
+                ", numberTwo = " + numberTwo + '}';
+    }
 }

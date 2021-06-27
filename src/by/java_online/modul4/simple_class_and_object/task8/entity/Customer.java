@@ -21,14 +21,6 @@ public class Customer {
         this.bankAccountNumber = bankAccountNumber;
     }
 
-    @Override
-    public String toString() {
-        return String.format("id: %d, Last name: %s, First name: %s, Patronymic: %s, Address: %s, " +
-                        "Credit card number: %s, Bank account number: %s",
-                id, lastName, firstName, patronymic, address,
-                cardNumber, bankAccountNumber);
-    }
-
     public int getId() {
         return id;
     }
@@ -80,4 +72,42 @@ public class Customer {
     public void setBankAccountNumber(long bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Customer customer = (Customer) o;
+
+        if (id != customer.id) return false;
+        if (cardNumber != customer.cardNumber) return false;
+        if (bankAccountNumber != customer.bankAccountNumber) return false;
+        if (firstName != null ? !firstName.equals(customer.firstName) : customer.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(customer.lastName) : customer.lastName != null) return false;
+        if (patronymic != null ? !patronymic.equals(customer.patronymic) : customer.patronymic != null) return false;
+        return address != null ? address.equals(customer.address) : customer.address == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (patronymic != null ? patronymic.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + cardNumber;
+        result = 31 * result + (int) (bankAccountNumber ^ (bankAccountNumber >>> 32));
+        return result;
+
+    }
+
+    @Override
+    public String toString() {
+        return String.format("id: %d, Last name: %s, First name: %s, Patronymic: %s, Address: %s, " +
+                        "Credit card number: %s, Bank account number: %s",
+                id, lastName, firstName, patronymic, address,
+                cardNumber, bankAccountNumber);
+    }
+
 }

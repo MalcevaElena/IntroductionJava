@@ -36,4 +36,30 @@ public class CustomerBase {
     public void setCustomerBase(List<Customer> customerBase) {
         this.customerBase = customerBase;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CustomerBase that = (CustomerBase) o;
+
+        if (nameGroup != null ? !nameGroup.equals(that.nameGroup) : that.nameGroup != null) return false;
+        return customerBase != null ? customerBase.equals(that.customerBase) : that.customerBase == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = nameGroup != null ? nameGroup.hashCode() : 0;
+        result = 31 * result + (customerBase != null ? customerBase.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerBase{" +
+                "nameGroup='" + nameGroup + '\'' +
+                ", customerBase=" + customerBase +
+                '}';
+    }
 }

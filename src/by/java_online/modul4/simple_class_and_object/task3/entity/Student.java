@@ -1,5 +1,7 @@
 package by.java_online.modul4.simple_class_and_object.task3.entity;
 
+import java.util.Arrays;
+
 public class Student {
     private String lastName;
     private String name;
@@ -41,4 +43,25 @@ public class Student {
         return academicPerformance;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Student student = (Student) o;
+
+        if (age != student.age) return false;
+        if (lastName != null ? !lastName.equals(student.lastName) : student.lastName != null) return false;
+        if (name != null ? !name.equals(student.name) : student.name != null) return false;
+        return Arrays.equals(academicPerformance, student.academicPerformance);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = lastName != null ? lastName.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + age;
+        result = 31 * result + Arrays.hashCode(academicPerformance);
+        return result;
+    }
 }

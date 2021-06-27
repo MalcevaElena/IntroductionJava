@@ -59,6 +59,32 @@ public class Airline {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Airline airline = (Airline) o;
+
+        if (flightNumber != airline.flightNumber) return false;
+        if (destination != null ? !destination.equals(airline.destination) : airline.destination != null) return false;
+        if (aircraftType != null ? !aircraftType.equals(airline.aircraftType) : airline.aircraftType != null)
+            return false;
+        if (departureTime != null ? !departureTime.equals(airline.departureTime) : airline.departureTime != null)
+            return false;
+        return dayOfWeek == airline.dayOfWeek;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = destination != null ? destination.hashCode() : 0;
+        result = 31 * result + flightNumber;
+        result = 31 * result + (aircraftType != null ? aircraftType.hashCode() : 0);
+        result = 31 * result + (departureTime != null ? departureTime.hashCode() : 0);
+        result = 31 * result + (dayOfWeek != null ? dayOfWeek.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return String.format("Пункт назначения: %s, Номер рейса: %d, Тип самолета: %s," +
                         " Время вылета: %s, День недели: %s.", destination, flightNumber, aircraftType,

@@ -20,6 +20,26 @@ public class Depo {
     public void addTrains(Train train) {
         trains.add(train);
     }
-    // equals, hashcode, toString
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Depo depo = (Depo) o;
+
+        return trains != null ? trains.equals(depo.trains) : depo.trains == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return trains != null ? trains.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Depo{" +
+                "trains=" + trains +
+                '}';
+    }
 }
