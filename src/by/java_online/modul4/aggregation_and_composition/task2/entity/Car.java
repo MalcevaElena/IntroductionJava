@@ -112,6 +112,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car { Марка автомобиля: " + carModel + ", топлива в баке: " + fuelQuantity + "л.}";
+        return "Car { fuelQuantity = " + fuelQuantity + ", carModel = " + carModel +
+                ", wheelList = " + wheelList + ", motor = " + motor + " }";
     }
 }
