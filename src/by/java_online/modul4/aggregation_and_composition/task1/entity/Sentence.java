@@ -1,20 +1,26 @@
 package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Sentence {
-    private StringBuffer sentenceList;
+    private List<Word> sentenceList;
 
     public Sentence() {
-        this.sentenceList = new StringBuffer();
+        this.sentenceList = new ArrayList<>();
     }
 
-    public StringBuffer getSentenceList() {
+    public List<Word> getSentenceList() {
         return sentenceList;
     }
 
-    public void setSentenceList(StringBuffer sentenceList) {
+    public void setSentenceList(List<Word> sentenceList) {
         this.sentenceList = sentenceList;
+    }
+
+    public void add(Word word) {
+        sentenceList.add(word);
     }
 
     @Override
@@ -27,8 +33,14 @@ public class Sentence {
 
     @Override
     public int hashCode() {
-        return 37 * sentenceList.hashCode();
-    }
+        final int prime = 37;
+        int result = 17;
+
+        for (Word w : sentenceList) {
+            result += prime * result + w.hashCode();
+        }
+        return result;
+        }
 
     @Override
     public String toString() {

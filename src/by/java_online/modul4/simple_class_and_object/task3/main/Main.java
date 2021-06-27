@@ -35,8 +35,8 @@ public class Main {
 
         View.printGroup(group);
 
-        List<Student> aStudens = groupLogic.AcademicPerformanceStudents(group);
-        View.printAStudens(aStudens, group);
+        List<Student> aStudents = groupLogic.AcademicPerformanceStudents(group);
+        View.printAStudents(aStudents, group);
 
     }
 }

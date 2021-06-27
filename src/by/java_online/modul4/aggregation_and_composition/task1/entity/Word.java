@@ -29,7 +29,10 @@ public class Word {
 
     @Override
     public int hashCode() {
-        return value.hashCode();
+        final int prime = 37;
+        int result = 17;
+        result += prime * result + value.hashCode();
+        return result;
     }
 
     @Override

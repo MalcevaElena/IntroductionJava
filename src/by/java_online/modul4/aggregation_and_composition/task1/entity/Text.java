@@ -5,29 +5,19 @@ import java.util.List;
 import java.util.Objects;
 
 public class Text {
-    private Sentence header;
+    private List<Sentence> header;
     private List<Sentence> body;
 
     public Text() {
-        this.header = new Sentence();
+        this.header = new ArrayList<>();
         this.body = new ArrayList<>();
     }
 
-    public Text(Sentence header) {
-        this.header = header;
-        this.body = new ArrayList<>();
-    }
-
-    public Text(Sentence header, List<Sentence> body) {
-        this.header = header;
-        this.body = body;
-    }
-
-    public Sentence getHeader() {
+    public List<Sentence> getHeader() {
         return header;
     }
 
-    public void setHeader(Sentence header) {
+    public void setHeader(List<Sentence> header) {
         this.header = header;
     }
 
@@ -49,11 +39,14 @@ public class Text {
 
     @Override
     public int hashCode() {
+        int prime = 37;
         int result = 17;
-        result += 37 * result + header.hashCode();
+        for (Sentence s: header) {
+            result += prime * result + s.hashCode();
+        }
 
-        for (int i = 0; i < body.size(); i++) {
-            result += 37 * result + body.get(i).hashCode();
+        for (Sentence sent : body) {
+            result += prime * result + sent.hashCode();
         }
         return result;
     }

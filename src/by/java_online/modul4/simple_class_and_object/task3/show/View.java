@@ -17,7 +17,7 @@ public class View {
         }
     }
 
-    public static void printAStudens(List<Student> students, Group group) {
+    public static void printAStudents(List<Student> students, Group group) {
 
         System.out.println("Отличники:");
         for (Student st : students) {
