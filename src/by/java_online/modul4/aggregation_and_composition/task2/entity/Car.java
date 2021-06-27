@@ -103,10 +103,12 @@ public class Car {
     public int hashCode() {
         final int prime = 37;
         int result = 17;
-        result += prime * result + fuelQuantity;
-        result += prime * result + carModel.hashCode();
-        result += prime * result + wheelList.hashCode();
-        result += prime * result + motor.hashCode();
+        result = prime * result + fuelQuantity;
+        result = prime * result + carModel.hashCode();
+        for (int i = 0; i < wheelList.size(); i++) {
+            result = prime * result + wheelList.get(i).hashCode();
+        }
+        result = prime * result + motor.hashCode();
         return result;
     }
 

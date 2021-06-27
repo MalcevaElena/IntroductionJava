@@ -86,8 +86,8 @@ public class Motor {
     public int hashCode() {
         final int prime = 37;
         int result = 17;
-        result += prime * result + enginePower;
-        result += prime * result + type.hashCode();
+        result = prime * result + enginePower;
+        result = prime * result + type.hashCode();
         return result;
     }
 

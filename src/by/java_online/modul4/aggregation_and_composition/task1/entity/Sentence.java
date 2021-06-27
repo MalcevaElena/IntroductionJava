@@ -27,20 +27,16 @@ public class Sentence {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Sentence sentence = (Sentence) o;
-        return Objects.equals(sentenceList, sentence.sentenceList);
+
+        return sentenceList != null ? sentenceList.equals(sentence.sentenceList) : sentence.sentenceList == null;
     }
 
     @Override
     public int hashCode() {
-        final int prime = 37;
-        int result = 17;
-
-        for (Word w : sentenceList) {
-            result += prime * result + w.hashCode();
-        }
-        return result;
-        }
+        return sentenceList != null ? sentenceList.hashCode() : 0;
+    }
 
     @Override
     public String toString() {

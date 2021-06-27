@@ -33,21 +33,17 @@ public class Text {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Text text = (Text) o;
-        return Objects.equals(header, text.header) && Objects.equals(body, text.body);
+
+        if (header != null ? !header.equals(text.header) : text.header != null) return false;
+        return body != null ? body.equals(text.body) : text.body == null;
     }
 
     @Override
     public int hashCode() {
-        int prime = 37;
-        int result = 17;
-        for (Sentence s: header) {
-            result += prime * result + s.hashCode();
-        }
-
-        for (Sentence sent : body) {
-            result += prime * result + sent.hashCode();
-        }
+        int result = header != null ? header.hashCode() : 0;
+        result = 31 * result + (body != null ? body.hashCode() : 0);
         return result;
     }
 

@@ -72,10 +72,10 @@ public class Wheel {
     public int hashCode() {
         final int prime = 37;
         int result = 1;
-        result += prime * result + radius;
-        result += prime * result + material.hashCode();
-        result += prime * result + (whole ? 1 : 0);
-        result += prime * result + rotationalSpeed;
+        result = prime * result + radius;
+        result = prime * result + material.hashCode();
+        result = prime * result + (whole ? 1 : 0);
+        result = prime * result + rotationalSpeed;
         return result;
     }
 
