@@ -2,17 +2,18 @@ package by.java_online.modul4.aggregation_and_composition.task4.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Bank {
     private String name;
-    private List <Customer> customers;
+    private List<Customer> customers;
 
     public Bank(String name) {
         this.name = name;
         this.customers = new ArrayList<>();
     }
 
-    public void add (Customer customer){
+    public void add(Customer customer) {
         this.customers.add(customer);
     }
 
@@ -38,9 +39,7 @@ public class Bank {
         if (o == null || getClass() != o.getClass()) return false;
 
         Bank bank = (Bank) o;
-
-        if (name != null ? !name.equals(bank.name) : bank.name != null) return false;
-        return customers != null ? customers.equals(bank.customers) : bank.customers == null;
+        return Objects.equals(name, bank.name) && Objects.equals(customers, bank.customers);
     }
 
     @Override

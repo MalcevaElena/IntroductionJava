@@ -12,8 +12,8 @@ public class Show {
         System.out.println("Счета клиента:");
         for (Account account : accounts) {
             System.out.println("Название карты: " + account.getName() + ", номер банковского счета: " +
-                    account.getAccountNumber() + ", баланс: " + account.getBalance()+
-                    ", блокировка карты: "+account.isBlock());
+                    account.getAccountNumber() + ", баланс: " + account.getBalance() +
+                    ", блокировка карты: " + account.isBlock());
         }
     }
 }

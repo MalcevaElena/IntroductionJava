@@ -2,18 +2,20 @@ package by.java_online.modul4.aggregation_and_composition.task4.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Customer {
     private String fullName;
     private int age;
-    private List <Account> accounts;
+    private List<Account> accounts;
 
     public Customer(String fullName, int age) {
         this.fullName = fullName;
         this.age = age;
         this.accounts = new ArrayList<>();
     }
-    public void add (Account account){
+
+    public void add(Account account) {
         this.accounts.add(account);
     }
 
@@ -33,11 +35,11 @@ public class Customer {
         this.age = age;
     }
 
-    public List<Account> getBankAccounts() {
+    public List<Account> getAccounts() {
         return accounts;
     }
 
-    public void setBankAccounts(List<Account> accounts) {
+    public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
     }
 
@@ -49,8 +51,7 @@ public class Customer {
         Customer customer = (Customer) o;
 
         if (age != customer.age) return false;
-        if (fullName != null ? !fullName.equals(customer.fullName) : customer.fullName != null) return false;
-        return accounts != null ? accounts.equals(customer.accounts) : customer.accounts == null;
+        return Objects.equals(fullName, customer.fullName) && Objects.equals(accounts, customer.accounts);
     }
 
     @Override

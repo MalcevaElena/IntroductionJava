@@ -1,5 +1,7 @@
 package by.java_online.modul4.aggregation_and_composition.task4.entity;
 
+import java.util.Objects;
+
 public class Account {
     private String name;
     private String accountNumber;
@@ -23,7 +25,7 @@ public class Account {
         return accountNumber;
     }
 
-    public void setAccountNumber(String bankAccountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -32,7 +34,7 @@ public class Account {
     }
 
     public void setBalance(int balance) {
-        if (isBlock == false) {
+        if (!isBlock) {
             this.balance = balance;
         } else {
             System.out.println("Счет заблокирован, операция невозможна.");
@@ -45,24 +47,23 @@ public class Account {
 
     public void setBlock(boolean isBlock) {
         this.isBlock = isBlock;
-        if (isBlock == false) {
+        if (!isBlock) {
             System.out.println("Счет разблокирован.");
         } else {
             System.out.println("Счет заблокирован.");
         }
         System.out.println();
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
         Account that = (Account) o;
-
         if (balance != that.balance) return false;
         if (this.isBlock != that.isBlock) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        return accountNumber != null ? accountNumber.equals(that.accountNumber) : that.accountNumber == null;
+        return Objects.equals(accountNumber, that.accountNumber) && Objects.equals(name, that.name);
     }
 
     @Override
