@@ -11,7 +11,7 @@ public class TrainLogic {
         sortTrain.addAll(trains);
         Train tpm;
         for (int i = 0; i < sortTrain.size(); i++) {
-            for (int j = sortTrain.size() - 1; j > i; j--) {
+            for (int j = sortTrain.size()-1; j > i; j--) {
                 if (sortTrain.get(i).getTrainNumber() > sortTrain.get(j).getTrainNumber()) {
                     tpm = sortTrain.get(j);
                     sortTrain.set(j, sortTrain.get(i));
