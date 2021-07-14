@@ -1,5 +1,9 @@
 package by.java_online.modul5.task1;
 
+/* Создать объект класса Текстовый файл, используя классы Файл, Директория.
+ * Методы: создать, переименовать, вывести на консоль содержимое, дополнить, удалить.
+ */
+
 public class Main {
     public static void main(String[] args) {
         Directory directory = new Directory("Корневой каталог");
