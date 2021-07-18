@@ -6,7 +6,7 @@ public class Account {
     private String name;
     private String accountNumber;
     private int balance = 0;
-    private boolean isBlock = false;
+    private boolean Block = false;
 
     public Account(String name, String accountNumber) {
         this.name = name;
@@ -34,7 +34,7 @@ public class Account {
     }
 
     public void setBalance(int balance) {
-        if (!isBlock) {
+        if (!Block) {
             this.balance = balance;
         } else {
             System.out.println("Счет заблокирован, операция невозможна.");
@@ -42,11 +42,11 @@ public class Account {
     }
 
     public boolean isBlock() {
-        return this.isBlock;
+        return this.Block;
     }
 
     public void setBlock(boolean isBlock) {
-        this.isBlock = isBlock;
+        this.Block = isBlock;
         if (!isBlock) {
             System.out.println("Счет разблокирован.");
         } else {
@@ -62,7 +62,7 @@ public class Account {
 
         Account that = (Account) o;
         if (balance != that.balance) return false;
-        if (this.isBlock != that.isBlock) return false;
+        if (this.Block != that.Block) return false;
         return Objects.equals(accountNumber, that.accountNumber) && Objects.equals(name, that.name);
     }
 
@@ -71,13 +71,13 @@ public class Account {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (accountNumber != null ? accountNumber.hashCode() : 0);
         result = 31 * result + balance;
-        result = 31 * result + (this.isBlock ? 1 : 0);
+        result = 31 * result + (this.Block ? 1 : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "Account { name = '" + name + '\'' + ", accountNumber = '" + accountNumber + '\'' +
-                ", balance = " + balance + ", isBlock = " + isBlock + '}';
+                ", balance = " + balance + ", isBlock = " + Block + '}';
     }
 }
