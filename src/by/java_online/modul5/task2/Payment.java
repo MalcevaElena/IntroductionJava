@@ -2,6 +2,7 @@ package by.java_online.modul5.task2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Payment {
     private List<Product> productList;
@@ -10,11 +11,13 @@ public class Payment {
         this.productList = new ArrayList<>();
     }
 
-    public Payment (List <Product> productList){
+    public Payment(List<Product> productList) {
         this.productList = productList;
     }
 
-
+    public void add(String name, double price) {
+        productList.add(new Product(name,price));
+    }
 
     public static class Product {
         private String name;
@@ -52,7 +55,7 @@ public class Payment {
             Product product = (Product) o;
 
             if (Double.compare(product.price, price) != 0) return false;
-            return name != null ? name.equals(product.name) : product.name == null;
+            return Objects.equals(name, product.name);
         }
 
         @Override
@@ -97,6 +100,6 @@ public class Payment {
 
     @Override
     public String toString() {
-        return "Payment{ productList=" + productList +'}';
+        return "Payment{ productList=" + productList + '}';
     }
 }

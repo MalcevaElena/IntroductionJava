@@ -1,4 +1,7 @@
-package by.java_online.modul5.task1;
+package by.java_online.modul5.task1.logic;
+
+import by.java_online.modul5.task1.entity.Directory;
+import by.java_online.modul5.task1.entity.TextFile;
 
 public class TextFileLogic {
 

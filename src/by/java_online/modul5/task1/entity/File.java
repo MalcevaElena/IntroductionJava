@@ -1,4 +1,4 @@
-package by.java_online.modul5.task1;
+package by.java_online.modul5.task1.entity;
 
 public class File {
 

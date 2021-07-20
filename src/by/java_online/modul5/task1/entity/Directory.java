@@ -1,25 +1,37 @@
-package by.java_online.modul5.task1;
+package by.java_online.modul5.task1.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Directory {
 
     private String name;
     private List<TextFile> textFileList;
+    private List<Directory> directoryList;
+
+    {
+        name = "Новая папка";
+        textFileList = new ArrayList<>();
+        directoryList = new ArrayList<>();
+    }
 
     public Directory() {
-        textFileList = new ArrayList<>();
     }
 
     public Directory(String name) {
         this.name = name;
-        textFileList = new ArrayList<>();
     }
 
     public Directory(String name, List<TextFile> textFileList) {
         this.name = name;
         this.textFileList = textFileList;
+    }
+
+    public Directory(String name, List<TextFile> textFileList, List<Directory> directoryList) {
+        this.name = name;
+        this.textFileList = textFileList;
+        this.directoryList = directoryList;
     }
 
     public String getName() {
@@ -38,6 +50,14 @@ public class Directory {
         this.textFileList = textFileList;
     }
 
+    public List<Directory> getDirectoryList() {
+        return directoryList;
+    }
+
+    public void setDirectoryList(List<Directory> directoryList) {
+        this.directoryList = directoryList;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -45,22 +65,25 @@ public class Directory {
 
         Directory directory = (Directory) o;
 
-        if (name != null ? !name.equals(directory.name) : directory.name != null) return false;
-        return textFileList != null ? textFileList.equals(directory.textFileList) : directory.textFileList == null;
+        if (!Objects.equals(name, directory.name)) return false;
+        if (!Objects.equals(directoryList, directory.directoryList)) return false;
+        return Objects.equals(textFileList, directory.textFileList);
     }
 
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (textFileList != null ? textFileList.hashCode() : 0);
+        result = 31 * result + (directoryList != null ? directoryList.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        return "Directory{ " +
+        return "Directory{" +
                 "name='" + name + '\'' +
                 ", textFileList=" + textFileList +
+                ", directoryList=" + directoryList +
                 '}';
     }
 }

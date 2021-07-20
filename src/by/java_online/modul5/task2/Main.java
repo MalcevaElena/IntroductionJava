@@ -8,15 +8,10 @@ public class Main {
         Payment payment = new Payment();
         PaymentLogic logic = new PaymentLogic();
 
-        Payment.Product watermelon = new Payment.Product("Арбуз", 250.50);
-        Payment.Product melon = new Payment.Product("Дыня", 360);
-        Payment.Product cucumber = new Payment.Product("Огурцы", 80);
-        Payment.Product tomato = new Payment.Product("Помидоры", 255);
-
-        payment.getProductList().add(watermelon);
-        payment.getProductList().add(melon);
-        payment.getProductList().add(cucumber);
-        payment.getProductList().add(tomato);
+        payment.add("watermelon", 250.50);
+        payment.add("melon", 360);
+        payment.add("cucumber",80);
+        payment.add("tomato", 255);
 
         double totalAmount = logic.totalAmountPayment(payment.getProductList());
 
