@@ -1,34 +1,26 @@
 package by.java_online.modul5.task4.bean;
 
+import java.util.Objects;
+
 public class Treasure {
 
-    private static int START_ID = 1;
-    private int id;
+    private String name;
     private int cost;
 
     public Treasure() {
-        this.id = START_ID++;
-    }
+            }
 
-    public Treasure(int cost) {
-        this.id = START_ID++;
+    public Treasure(String name,int cost) {
+        this.name = name;
         this.cost = cost;
     }
 
-    public static int getStartId() {
-        return START_ID;
+    public String getName() {
+        return name;
     }
 
-    public static void setStartId(int startId) {
-        START_ID = startId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getCost() {
@@ -46,13 +38,13 @@ public class Treasure {
 
         Treasure treasure = (Treasure) o;
 
-        if (id != treasure.id) return false;
-        return cost == treasure.cost;
+        if (cost != treasure.cost) return false;
+        return Objects.equals(name, treasure.name);
     }
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = name != null ? name.hashCode() : 0;
         result = 31 * result + cost;
         return result;
     }
@@ -60,7 +52,7 @@ public class Treasure {
     @Override
     public String toString() {
         return "Treasure{" +
-                "id=" + id +
+                "name='" + name + '\'' +
                 ", cost=" + cost +
                 '}';
     }
