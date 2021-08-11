@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileTreasureDAO implements TreasureDAO {
-    private static final String TREASURE_SOURCE = "\\resources\\TreasureList.txt";
+    private static final String TREASURE_SOURCE = "by\\java_online\\modul5\\task4\\dao\\impl\\resources\\TreasureList.txt";
 
     @Override
     public List<Treasure> readFile() throws DAOException {

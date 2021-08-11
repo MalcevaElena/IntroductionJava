@@ -1,16 +1,19 @@
 package by.java_online.modul5.task4.bean;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Treasure {
+public class Treasure implements Serializable {
+    
+    private static final long serialVersionUID = 2L;
 
     private String name;
     private int cost;
 
     public Treasure() {
-            }
+    }
 
-    public Treasure(String name,int cost) {
+    public Treasure(String name, int cost) {
         this.name = name;
         this.cost = cost;
     }
