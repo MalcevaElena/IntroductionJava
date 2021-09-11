@@ -1,16 +1,17 @@
 package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Text {
+public class Text implements Serializable {
     private List<Sentence> header;
     private List<Sentence> body;
 
     public Text() {
-        this.header = new ArrayList<>();
-        this.body = new ArrayList<>();
+        this.header = new ArrayList<Sentence>();
+        this.body = new ArrayList<Sentence>();
     }
 
     public List<Sentence> getHeader() {
@@ -36,8 +37,8 @@ public class Text {
 
         Text text = (Text) o;
 
-        if (header != null ? !header.equals(text.header) : text.header != null) return false;
-        return body != null ? body.equals(text.body) : text.body == null;
+        if (!Objects.equals(header, text.header)) return false;
+        return Objects.equals(body, text.body);
     }
 
     @Override

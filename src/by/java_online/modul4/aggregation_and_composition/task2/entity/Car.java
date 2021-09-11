@@ -1,55 +1,43 @@
 package by.java_online.modul4.aggregation_and_composition.task2.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Car {
+public class Car implements Serializable {
     private final static int MAX_VOLUME_FUEL_TANK = 40;
     private int fuelQuantity = 0;
     private String carModel = "Lada";
-    private List<Wheel> wheelList = new ArrayList<>();
-    private Motor motor;
+    private List<Wheel> wheelList = new ArrayList<Wheel>();
+    private Motor motor = new Motor (150);
 
     // Создаем автомобиль с 1 мотором и 4 колесами
     public Car() {
-        motor = Motor.getInstance();
-        for (int i = 0; i < 4; i++) {
+         for (int i = 0; i < 4; i++) {
             Wheel wheel = new Wheel();
             wheelList.add(wheel);
         }
     }
 
     public Car(int fuelQuantity) {
+        this();
         if (fuelQuantity >= 1 && fuelQuantity <= MAX_VOLUME_FUEL_TANK) {
             this.fuelQuantity = fuelQuantity;
-        }
-        motor = Motor.getInstance();
-        for (int i = 0; i < 4; i++) {
-            Wheel wheel = new Wheel();
-            wheelList.add(wheel);
         }
     }
 
     public Car(String carModel) {
+        this();
         this.carModel = carModel;
-        motor = Motor.getInstance();
-        for (int i = 0; i < 4; i++) {
-            Wheel wheel = new Wheel();
-            wheelList.add(wheel);
-        }
     }
 
     public Car(int fuelQuantity, String carModel) {
+        this();
         if (fuelQuantity >= 1 && fuelQuantity <= MAX_VOLUME_FUEL_TANK) {
             this.fuelQuantity = fuelQuantity;
         }
         this.carModel = carModel;
-        motor = Motor.getInstance();
-        for (int i = 0; i < 4; i++) {
-            Wheel wheel = new Wheel();
-            wheelList.add(wheel);
-        }
     }
 
     public static int getMaxVolumeFuelTank() {

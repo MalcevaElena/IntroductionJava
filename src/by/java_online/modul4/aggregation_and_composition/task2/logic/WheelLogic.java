@@ -7,7 +7,7 @@ public class WheelLogic {
 
     public static void changeWheel(Car car) {
         for (int i = 0; i < car.getWheelList().size(); i++) {
-            if (car.getWheelList().get(i).isWhole() == false) {
+            if (!car.getWheelList().get(i).isWhole()) {
                 car.getWheelList().remove(car.getWheelList().get(i));
                 i--;
                 Wheel wheel = new Wheel();
@@ -17,7 +17,7 @@ public class WheelLogic {
 
     public static void changeWheel(Car car, int radius) {
         for (int i = 0; i < car.getWheelList().size(); i++) {
-            if (car.getWheelList().get(i).isWhole() == false) {
+            if (!car.getWheelList().get(i).isWhole()) {
                 car.getWheelList().remove(car.getWheelList().get(i));
                 i--;
                 Wheel wheel = new Wheel(radius);
@@ -27,7 +27,7 @@ public class WheelLogic {
 
     public static void changeWheel(Car car, int radius, String material) {
         for (int i = 0; i < car.getWheelList().size(); i++) {
-            if (car.getWheelList().get(i).isWhole() == false) {
+            if (!car.getWheelList().get(i).isWhole()) {
                 car.getWheelList().remove(car.getWheelList().get(i));
                 i--;
                 Wheel wheel = new Wheel(radius, material);
@@ -36,9 +36,10 @@ public class WheelLogic {
     }
 
     public void spinWheel(Car car, int speed) {
+        int rotation = 60;
         if (speed > 0) {
             for (int i = 0; i < car.getWheelList().size(); i++) {
-                car.getWheelList().get(i).setRotationalSpeed(speed * 60); // 60 оборотов
+                car.getWheelList().get(i).setRotationalSpeed(speed * rotation);
             }
         } else {
             System.out.println("Ошибка, скорость не может быть отрицательной.");

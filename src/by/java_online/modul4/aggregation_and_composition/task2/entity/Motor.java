@@ -1,16 +1,19 @@
 package by.java_online.modul4.aggregation_and_composition.task2.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Motor {
-    private int enginePower = 110;
-    private String type = "Бензиновый";
-    private static Motor motor;
+public class Motor implements Serializable {
+    private int enginePower;
+    private String type;
 
-    private Motor() {
+    {
+        enginePower = 110;
+        type = "Бензиновый";
     }
 
-    private Motor(int enginePower) {
+    public  Motor() {}
+    public Motor(int enginePower) {
         if (enginePower > 80 && enginePower < 200) {
             this.enginePower = enginePower;
         } else {
@@ -19,36 +22,11 @@ public class Motor {
         }
     }
 
-    private Motor(int enginePower, String type) {
-        if (enginePower > 80 && enginePower < 200) {
-            this.enginePower = enginePower;
-        } else {
-            System.out.println("Ошибка, двигатель с данной мощностью не подходит для данного автомобиля.");
-            System.out.println("Исключения еще не проходили.");
-        }
+    public Motor(int enginePower, String type) {
+        this (enginePower);
         this.type = type;
     }
 
-    public static Motor getInstance() {
-        if (motor == null) {
-            motor = new Motor();
-        }
-        return motor;
-    }
-
-    public static Motor getInstance(int enginePower) {
-        if (motor == null) {
-            motor = new Motor(enginePower);
-        }
-        return motor;
-    }
-
-    public static Motor getInstance(int enginePower, String type) {
-        if (motor == null) {
-            motor = new Motor(enginePower, type);
-        }
-        return motor;
-    }
 
     public int getEnginePower() {
         return enginePower;
@@ -66,13 +44,6 @@ public class Motor {
         this.type = type;
     }
 
-    public static Motor getMotor() {
-        return motor;
-    }
-
-    public static void setMotor(Motor motor) {
-        Motor.motor = motor;
-    }
 
     @Override
     public boolean equals(Object o) {

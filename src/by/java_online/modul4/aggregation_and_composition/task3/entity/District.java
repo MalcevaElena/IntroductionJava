@@ -1,23 +1,27 @@
 package by.java_online.modul4.aggregation_and_composition.task3.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 //район
-public class District {
+public class District implements Serializable {
     private String name;
     private List<City> cityList;
-    private double area = 0;
+    private double area;
+
+    public District() {
+    }
 
     public District(String name) {
         this.name = name;
-        cityList = new ArrayList<>();
+        cityList = new ArrayList<City>();
     }
 
-    public void add (City city){
+    public void add(City city) {
         cityList.add(city);
-        this.area+=city.getArea();
+        this.area += city.getArea();
     }
 
     public String getName() {
@@ -52,7 +56,7 @@ public class District {
         District district = (District) o;
 
         return Double.compare(district.area, area) == 0 &&
-               Objects.equals(name, district.name) && Objects.equals(cityList, district.cityList);
+                Objects.equals(name, district.name) && Objects.equals(cityList, district.cityList);
     }
 
     @Override
@@ -60,7 +64,7 @@ public class District {
         int prime = 37;
         int result = 17;
         long temp;
-        result += prime*result+name.hashCode();
+        result += prime * result + name.hashCode();
         temp = Double.doubleToLongBits(area);
         result += prime * result + (int) (temp ^ (temp >>> 32));
         result += prime * result + (cityList != null ? cityList.hashCode() : 0);

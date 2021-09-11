@@ -35,7 +35,7 @@ public class Main {
 
         // создаем предложение "Заголовок"
         Sentence headerSentence = new Sentence();
-        headerSentence.add(new Word("Cочинение "));
+        headerSentence.add(new Word("Сочинение "));
         headerSentence.add(new Word("про лето."));
 
         Text text = new Text();

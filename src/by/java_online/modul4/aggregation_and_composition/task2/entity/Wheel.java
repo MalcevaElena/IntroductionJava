@@ -1,6 +1,8 @@
 package by.java_online.modul4.aggregation_and_composition.task2.entity;
 
-public class Wheel {
+import java.io.Serializable;
+
+public class Wheel implements Serializable {
     private int radius = 14;
     private String material = "Литые диски";
     private boolean whole = true;
@@ -19,12 +21,7 @@ public class Wheel {
     }
 
     public Wheel(int radius, String material) {
-        if (radius < 14 || radius > 20) {
-            this.radius = radius;
-        } else {
-            System.out.println("Данный радиус колес не может быть установлен на данный автомобиль.");
-            System.out.print("Или появляется исключение, или предложение об установки колес другого радиуса.");
-        }
+        this(radius);
         this.material = material;
     }
 

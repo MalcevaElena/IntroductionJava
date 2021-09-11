@@ -1,18 +1,21 @@
 package by.java_online.modul4.aggregation_and_composition.task4.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Customer {
+public class Customer implements Serializable {
     private String fullName;
     private int age;
-    private List<Account> accounts;
+    private List<Account> accounts = new ArrayList<Account>();
+
+    public Customer() {
+    }
 
     public Customer(String fullName, int age) {
         this.fullName = fullName;
         this.age = age;
-        this.accounts = new ArrayList<>();
     }
 
     public void add(Account account) {

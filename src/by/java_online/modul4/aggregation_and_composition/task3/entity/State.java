@@ -1,26 +1,31 @@
 package by.java_online.modul4.aggregation_and_composition.task3.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class State {
+public class State implements Serializable {
     private String name;
     private String capital;
     private List<Region> regionList;
-    private int numberOfRegion = 0;
-    private int area = 0;
+    private int numberOfRegion;
+    private int area;
+
+    public State() {
+    }
 
     public State(String name, String capital) {
         this.name = name;
         this.capital = capital;
-        regionList = new ArrayList<>();
+        regionList = new ArrayList<Region>();
 
     }
 
-    public void add (Region region){
+    public void add(Region region) {
         regionList.add(region);
         numberOfRegion++;
-        area+=region.getArea();
+        area += region.getArea();
     }
 
     public String getName() {
@@ -72,9 +77,9 @@ public class State {
 
         if (numberOfRegion != state.numberOfRegion) return false;
         if (area != state.area) return false;
-        if (name != null ? !name.equals(state.name) : state.name != null) return false;
-        if (capital != null ? !capital.equals(state.capital) : state.capital != null) return false;
-        return regionList != null ? regionList.equals(state.regionList) : state.regionList == null;
+        if (!Objects.equals(name, state.name)) return false;
+        if (!Objects.equals(capital, state.capital)) return false;
+        return Objects.equals(regionList, state.regionList);
     }
 
     @Override

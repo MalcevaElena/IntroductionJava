@@ -1,20 +1,21 @@
 package by.java_online.modul4.aggregation_and_composition.task5.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class TravelCompany {
+public class TravelCompany implements Serializable {
     private String name;
-    private List <Voucher> voucherList;
+    private List<Voucher> voucherList;
 
     public TravelCompany() {
-        this.name = "Гулливер";
-        this.voucherList = new ArrayList<>();
+        this.voucherList = new ArrayList<Voucher>();
     }
 
     public TravelCompany(String name) {
+        this();
         this.name = name;
-        this.voucherList = new ArrayList<>();
     }
 
     public TravelCompany(String name, List<Voucher> voucherList) {
@@ -22,7 +23,7 @@ public class TravelCompany {
         this.voucherList = voucherList;
     }
 
-    public void add (Voucher voucher){
+    public void add(Voucher voucher) {
         voucherList.add(voucher);
     }
 
@@ -40,5 +41,31 @@ public class TravelCompany {
 
     public void setVoucherList(List<Voucher> voucherList) {
         this.voucherList = voucherList;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TravelCompany travelCompany = (TravelCompany) o;
+        if (!Objects.equals(name, travelCompany.name)) return false;
+        return Objects.equals(voucherList, travelCompany.voucherList);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (voucherList != null ? voucherList.hashCode() : 0);
+
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "TravelCompany{" +
+                "name='" + name + '\'' +
+                ", voucherList=" + voucherList +
+                '}';
     }
 }

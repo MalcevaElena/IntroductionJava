@@ -59,8 +59,6 @@ public class Main {
                 new GregorianCalendar(2021, 07, 7), 23000);
         anex.add(cruise2);
 
-        //Show.printVoucher(anex.getVoucherList());
-
         System.out.println("Отсортируем по типу путевки:");
         Show.printVoucher(logic.sortTypeVoucher(anex.getVoucherList()));
 

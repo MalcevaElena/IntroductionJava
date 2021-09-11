@@ -10,6 +10,7 @@ public class Show {
     public void printCapital (State state) {
         System.out.println("Столица: "+ state.getCapital());
     }
+
     public void printNumberRegion(State state) {
         System.out.println("В стране "+ state.getName()+ " количество областей:"+ state.getNumberOfRegion());
     }
@@ -17,6 +18,7 @@ public class Show {
     public void printArea (State state){
         System.out.println("Площадь страны: "+ state.getArea());
     }
+
     public void printArea (Region region){
         System.out.println("Площадь области: "+region.getName()+": "+ region.getArea());
     }

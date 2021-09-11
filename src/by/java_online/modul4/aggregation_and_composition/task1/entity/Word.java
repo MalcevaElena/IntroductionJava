@@ -1,8 +1,9 @@
 package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Word {
+public class Word implements Serializable {
     private String value;
 
     public Word() {
@@ -28,7 +29,7 @@ public class Word {
 
         Word word = (Word) o;
 
-        return value != null ? value.equals(word.value) : word.value == null;
+        return Objects.equals(value, word.value);
     }
 
     @Override

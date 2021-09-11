@@ -12,7 +12,7 @@ import java.util.List;
 public class TravelCompanyLogic {
 
     public List<Voucher> sortTypeVoucher(List<Voucher> vouchers) {
-        List<Voucher> sortTypeVoucher = new ArrayList<>();
+        List<Voucher> sortTypeVoucher = new ArrayList<Voucher>();
         sortTypeVoucher.addAll(vouchers);
         Voucher tpm;
         for (int i = 1; i < sortTypeVoucher.size() - 1; i++) {
@@ -28,7 +28,7 @@ public class TravelCompanyLogic {
     }
 
     public List<Voucher> sortTypeFood(List<Voucher> vouchers) {
-        List<Voucher> sortTypeFood = new ArrayList<>();
+        List<Voucher> sortTypeFood = new ArrayList<Voucher>();
         sortTypeFood.addAll(vouchers);
         Voucher tpm;
         for (int i = 1; i < sortTypeFood.size() - 1; i++) {
@@ -44,12 +44,12 @@ public class TravelCompanyLogic {
     }
 
     public List<Voucher> sortTypeTransport(List<Voucher> vouchers) {
-        List<Voucher> sortTypeTransport = new ArrayList<>();
+        List<Voucher> sortTypeTransport = new ArrayList<Voucher>();
         sortTypeTransport.addAll(vouchers);
         Voucher tpm;
         for (int i = 1; i < sortTypeTransport.size() - 1; i++) {
-            for (int j = sortTypeTransport.size() - 1; j > 1; j--) {
-                if (sortTypeTransport.get(i - 1).getTypeTransport().equals(sortTypeTransport.get(j).getTypeTransport())) {
+            for (int j = sortTypeTransport.size() - 1; j > i; j--) {
+                if (sortTypeTransport.get(i-1).getTypeTransport().equals(sortTypeTransport.get(j).getTypeTransport())) {
                     tpm = sortTypeTransport.get(j);
                     sortTypeTransport.set(j, sortTypeTransport.get(i));
                     sortTypeTransport.set(i, tpm);
@@ -60,7 +60,7 @@ public class TravelCompanyLogic {
     }
 
     public List<Voucher> sortNumberDay(List<Voucher> vouchers) {
-        List<Voucher> sortNumberDay = new ArrayList<>();
+        List<Voucher> sortNumberDay = new ArrayList<Voucher>();
         sortNumberDay.addAll(vouchers);
         Voucher tpm;
         for (int i = 0; i < sortNumberDay.size() - 1; i++) {
@@ -76,7 +76,7 @@ public class TravelCompanyLogic {
     }
 
     public List<Voucher> sortPrice(List<Voucher> vouchers) {
-        List<Voucher> sortPrice = new ArrayList<>();
+        List<Voucher> sortPrice = new ArrayList<Voucher>();
         sortPrice.addAll(vouchers);
         Voucher tpm;
         for (int i = 0; i < sortPrice.size() - 1; i++) {
@@ -96,7 +96,7 @@ public class TravelCompanyLogic {
         if (typeVoucher == null) {
             return voucherList;
         }
-        List<Voucher> listTypeVoucher = new ArrayList<>();
+        List<Voucher> listTypeVoucher = new ArrayList<Voucher>();
         for (int i = 0; i < voucherList.size(); i++) {
             if (voucherList.get(i).getTypeVoucher().equals(typeVoucher)) {
                 listTypeVoucher.add(voucherList.get(i));
@@ -109,7 +109,7 @@ public class TravelCompanyLogic {
         if (typeFood == null) {
             return voucherList;
         }
-        List<Voucher> listTypeFood = new ArrayList<>();
+        List<Voucher> listTypeFood = new ArrayList<Voucher>();
         for (int i = 0; i < voucherList.size(); i++) {
             if (voucherList.get(i).getTypeFood().equals(typeFood)) {
                 listTypeFood.add(voucherList.get(i));
@@ -122,7 +122,7 @@ public class TravelCompanyLogic {
         if (typeTransport == null) {
             return voucherList;
         }
-        List<Voucher> listTypeTransport = new ArrayList<>();
+        List<Voucher> listTypeTransport = new ArrayList<Voucher>();
         for (int i = 0; i < voucherList.size(); i++) {
             if (voucherList.get(i).getTypeTransport().equals(typeTransport)) {
                 listTypeTransport.add(voucherList.get(i));
@@ -135,7 +135,7 @@ public class TravelCompanyLogic {
         if (day == 0) {
             return voucherList;
         }
-        List<Voucher> listNumberDay = new ArrayList<>();
+        List<Voucher> listNumberDay = new ArrayList<Voucher>();
         for (int i = 0; i < voucherList.size(); i++) {
             if (voucherList.get(i).getDays() == day) {
                 listNumberDay.add(voucherList.get(i));
@@ -149,7 +149,7 @@ public class TravelCompanyLogic {
         if (checkIn == null) {
             return voucherList;
         }
-        List<Voucher> listCalendar = new ArrayList<>();
+        List<Voucher> listCalendar = new ArrayList<Voucher>();
         for (int i = 0; i < voucherList.size(); i++) {
             if (voucherList.get(i).getCheckIn().equals(checkIn)) {
                 listCalendar.add(voucherList.get(i));
@@ -162,7 +162,7 @@ public class TravelCompanyLogic {
         if (price == 0) {
             return voucherList;
         }
-        List<Voucher> listPrice = new ArrayList<>();
+        List<Voucher> listPrice = new ArrayList<Voucher>();
         for (int i = 0; i < voucherList.size(); i++) {
             if (voucherList.get(i).getPrice()<=price) {
                 listPrice.add(voucherList.get(i));

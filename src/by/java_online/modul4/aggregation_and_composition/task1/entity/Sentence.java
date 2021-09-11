@@ -1,14 +1,15 @@
 package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Sentence {
+public class Sentence implements Serializable {
     private List<Word> sentenceList;
 
     public Sentence() {
-        this.sentenceList = new ArrayList<>();
+        this.sentenceList = new ArrayList<Word>();
     }
 
     public List<Word> getSentenceList() {
@@ -30,7 +31,7 @@ public class Sentence {
 
         Sentence sentence = (Sentence) o;
 
-        return sentenceList != null ? sentenceList.equals(sentence.sentenceList) : sentence.sentenceList == null;
+        return Objects.equals(sentenceList, sentence.sentenceList);
     }
 
     @Override

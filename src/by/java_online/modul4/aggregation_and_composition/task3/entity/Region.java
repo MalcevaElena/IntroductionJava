@@ -1,19 +1,24 @@
 package by.java_online.modul4.aggregation_and_composition.task3.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 //область
-public class Region {
+public class Region implements Serializable {
     private String name;
     private City regionalCenter;
     private List<District> districtList;
-    private int area = 0;
+    private int area;
+
+    public Region() {
+    }
 
     public Region(String name, City regionalCenter) {
         this.name = name;
         this.regionalCenter = regionalCenter;
-        districtList = new ArrayList<>();
+        districtList = new ArrayList<District>();
 
     }
 
@@ -62,10 +67,9 @@ public class Region {
         Region region = (Region) o;
 
         if (area != region.area) return false;
-        if (name != null ? !name.equals(region.name) : region.name != null) return false;
-        if (regionalCenter != null ? !regionalCenter.equals(region.regionalCenter) : region.regionalCenter != null)
-            return false;
-        return districtList != null ? districtList.equals(region.districtList) : region.districtList == null;
+        if (!Objects.equals(name, region.name)) return false;
+        if (!Objects.equals(regionalCenter, region.regionalCenter)) return false;
+        return Objects.equals(districtList, region.districtList);
     }
 
     @Override

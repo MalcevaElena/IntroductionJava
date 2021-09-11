@@ -10,7 +10,7 @@ public class CustomerLogic {
 
     public List<Account> sortByBalance(Customer customer) {
 
-        List<Account> accounts = new ArrayList<>();
+        List<Account> accounts = new ArrayList<Account>();
         accounts.addAll(customer.getAccounts());
 
         Account tmp;

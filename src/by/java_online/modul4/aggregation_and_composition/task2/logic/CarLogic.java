@@ -19,26 +19,14 @@ public class CarLogic {
     }
 
     public void drive(Car car, int numberSpeedOnGearShift) {
-        int speed = 0;
-        switch (numberSpeedOnGearShift) {
-            case 1:
-                speed = 20;
-                break;
-            case 2:
-                speed = 35;
-                break;
-            case 3:
-                speed = 55;
-                break;
-            case 4:
-                speed = 85;
-                break;
-            case 5:
-                speed = 95;
-                break;
-            default:
-                speed = 10;
-        }
+        int speed = switch (numberSpeedOnGearShift) {
+            case 1 -> 20;
+            case 2 -> 35;
+            case 3 -> 55;
+            case 4 -> 85;
+            case 5 -> 95;
+            default -> 10;
+        };
         motorLogic.run(car, speed);
     }
 

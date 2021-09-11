@@ -1,10 +1,14 @@
 package by.java_online.modul4.aggregation_and_composition.task3.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class City {
+public class City implements Serializable {
     private String name;
     private double area;
+
+    public City() {
+    }
 
     public City(String name, double area) {
         this.name = name;
@@ -33,7 +37,7 @@ public class City {
         if (o == null || getClass() != o.getClass()) return false;
 
         City city = (City) o;
-        return Objects.equals(name,city.name) && Double.compare(area, city.area)==0;
+        return Objects.equals(name, city.name) && Double.compare(area, city.area) == 0;
     }
 
     @Override
@@ -41,7 +45,7 @@ public class City {
         int prime = 37;
         int result = 17;
         long temp;
-        result += prime*result+name.hashCode();
+        result += prime * result + name.hashCode();
         temp = Double.doubleToLongBits(area);
         result += prime * result + (int) (temp ^ (temp >>> 32));
         return result;
