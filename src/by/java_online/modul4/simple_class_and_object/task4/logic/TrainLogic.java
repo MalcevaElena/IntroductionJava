@@ -7,7 +7,7 @@ import java.util.*;
 public class TrainLogic {
 
     public static List<Train> sortTrainNumber(List<Train> trains) {
-        List<Train> sortTrain = new ArrayList<>();
+        List<Train> sortTrain = new ArrayList<Train>();
         sortTrain.addAll(trains);
         Train tpm;
         for (int i = 0; i < sortTrain.size(); i++) {
@@ -34,7 +34,7 @@ public class TrainLogic {
     }
 
     public static List<Train> sortDestination(List<Train> trains) {
-        List<Train> sortTrain = new ArrayList<>();
+        List<Train> sortTrain = new ArrayList<Train>();
         sortTrain.addAll(trains);
 
         int timeOne = 0;

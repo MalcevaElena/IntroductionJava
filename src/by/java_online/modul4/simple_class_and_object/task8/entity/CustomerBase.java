@@ -1,10 +1,17 @@
 package by.java_online.modul4.simple_class_and_object.task8.entity;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class CustomerBase {
+public class CustomerBase implements Serializable {
     private String nameGroup;
     private List<Customer> customerBase;
+
+    public CustomerBase () {
+        this.customerBase = new ArrayList<Customer>();
+    }
 
     public CustomerBase(List<Customer> customerBase) {
         this.nameGroup = "Покупатели для информационной рассылки";
@@ -44,8 +51,8 @@ public class CustomerBase {
 
         CustomerBase that = (CustomerBase) o;
 
-        if (nameGroup != null ? !nameGroup.equals(that.nameGroup) : that.nameGroup != null) return false;
-        return customerBase != null ? customerBase.equals(that.customerBase) : that.customerBase == null;
+        if (!Objects.equals(nameGroup, that.nameGroup)) return false;
+        return Objects.equals(customerBase, that.customerBase);
     }
 
     @Override

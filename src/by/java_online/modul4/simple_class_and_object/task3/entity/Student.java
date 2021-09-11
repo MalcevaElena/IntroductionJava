@@ -1,18 +1,22 @@
 package by.java_online.modul4.simple_class_and_object.task3.entity;
 
+import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Objects;
 
-public class Student {
+public class Student implements Serializable {
     private String lastName;
     private String name;
     private int age;
-    private final int[] academicPerformance; //кол-во экзаменов 5 и оценки;
+    private final int[] academicPerformance = new int[5]; //кол-во экзаменов 5;
+
+    public Student() {
+    }
 
     public Student(String lastName, String name, int age) {
         this.lastName = lastName;
         this.name = name;
         this.age = age;
-        academicPerformance = new int[5];
     }
 
     public String getLastName() {
@@ -43,6 +47,14 @@ public class Student {
         return academicPerformance;
     }
 
+    public int getAcademicPerformance(int index) {
+        return academicPerformance[index];
+    }
+
+    public void setAcademicPerformance(int index, int number) {
+        this.academicPerformance[index] = number;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -51,8 +63,8 @@ public class Student {
         Student student = (Student) o;
 
         if (age != student.age) return false;
-        if (lastName != null ? !lastName.equals(student.lastName) : student.lastName != null) return false;
-        if (name != null ? !name.equals(student.name) : student.name != null) return false;
+        if (!Objects.equals(lastName, student.lastName)) return false;
+        if (!Objects.equals(name, student.name)) return false;
         return Arrays.equals(academicPerformance, student.academicPerformance);
     }
 
@@ -63,5 +75,15 @@ public class Student {
         result = 31 * result + age;
         result = 31 * result + Arrays.hashCode(academicPerformance);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "lastName='" + lastName + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", academicPerformance=" + Arrays.toString(academicPerformance) +
+                '}';
     }
 }

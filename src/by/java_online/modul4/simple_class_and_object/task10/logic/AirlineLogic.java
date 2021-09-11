@@ -17,7 +17,7 @@ import java.util.Objects;
 public class AirlineLogic {
 
     public static List<Airline> destinationAirline(String destination, List<Airline> airlines) {
-        List<Airline> destinationAirline = new ArrayList<>();
+        List<Airline> destinationAirline = new ArrayList<Airline>();
         for (int i = 0; i < airlines.size(); i++) {
             if (airlines.get(i).getDestination().equalsIgnoreCase(destination)) {
                 destinationAirline.add(airlines.get(i));
@@ -27,7 +27,7 @@ public class AirlineLogic {
     }
 
     public static List<Airline> dayOfWeekAirline(DayOfWeek day, List<Airline> airlines) {
-        List<Airline> dayOfWeekAirline = new ArrayList<>();
+        List<Airline> dayOfWeekAirline = new ArrayList<Airline>();
         for (int i = 0; i < airlines.size(); i++) {
             if (Objects.equals(airlines.get(i).getDayOfWeek(), day)) {
                 dayOfWeekAirline.add(airlines.get(i));
@@ -39,7 +39,7 @@ public class AirlineLogic {
     public static List<Airline> dayOfWeekAirlineAndTime(DayOfWeek day, LocalTime time, List<Airline> airlines) {
         int timeOne = time.getHour() * 60 + time.getMinute();
         int timeTwo;
-        List<Airline> dayOfWeekAirlineAndTime = new ArrayList<>();
+        List<Airline> dayOfWeekAirlineAndTime = new ArrayList<Airline>();
         List<Airline> dayOfWeekAirline = dayOfWeekAirline(day, airlines);
         for (int i = 0; i < dayOfWeekAirline.size(); i++) {
             timeTwo = dayOfWeekAirline.get(i).getDepartureTime().getHour() * 60 + dayOfWeekAirline.get(i).getDepartureTime().getMinute();

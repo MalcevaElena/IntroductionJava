@@ -15,7 +15,7 @@ public class GroupLogic {
 
     public List<Student> AcademicPerformanceStudents(Group group) {
         List<Student> students = group.getStudentList();
-        List<Student> AStudents = new ArrayList<>();
+        List<Student> AStudents = new ArrayList<Student>();
 
         for (Student st : students) {
             if (studentLogic.excellentStudents(st)) {

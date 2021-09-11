@@ -11,7 +11,7 @@ import java.util.List;
 public class CustomerLogic {
 
     public static List<Customer> sortName(CustomerBase base) {
-        List<Customer> sortNameCustomer = new ArrayList<>();
+        List<Customer> sortNameCustomer = new ArrayList<Customer>();
         sortNameCustomer.addAll(base.getCustomerBase());
         Collections.sort(sortNameCustomer, new Comparator<Customer>() {
             @Override
@@ -23,7 +23,7 @@ public class CustomerLogic {
     }
 
     public static List<Customer> rangeCreditCard(CustomerBase base, int min, int max) {
-        List<Customer> list = new ArrayList<>();
+        List<Customer> list = new ArrayList<Customer>();
         for (int i = 0; i < base.getCustomerBase().size(); i++) {
             if (base.getCustomerBase().get(i).getCardNumber() > min
                     && base.getCustomerBase().get(i).getCardNumber() < max) {

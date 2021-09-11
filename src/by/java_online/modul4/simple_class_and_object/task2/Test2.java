@@ -5,6 +5,8 @@ package by.java_online.modul4.simple_class_and_object.task2;
  * Добавьте set- и get- методы для полей экземпляра класса.
  */
 
+import java.util.Objects;
+
 public class Test2 {
     private String name;
     private int age;
@@ -43,7 +45,7 @@ public class Test2 {
         Test2 test2 = (Test2) o;
 
         if (age != test2.age) return false;
-        return name != null ? name.equals(test2.name) : test2.name == null;
+        return Objects.equals(name, test2.name);
     }
 
     @Override

@@ -1,14 +1,19 @@
 package by.java_online.modul4.simple_class_and_object.task9;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class BookCase {
+public class BookCase implements Serializable {
     private String name;
     private List<Book> books;
 
+    public BookCase (){
+        this.books = new ArrayList<Book>();
+    }
+
     public BookCase(List<Book> books) {
-        this.name = "Детективы";
         this.books = books;
     }
 
@@ -39,7 +44,7 @@ public class BookCase {
     }
 
     public List<Book> searchByAuthor(String author) {
-        List<Book> result = new ArrayList<>();
+        List<Book> result = new ArrayList<Book>();
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i).getAuthor().equals(author)) {
                 result.add(books.get(i));
@@ -49,7 +54,7 @@ public class BookCase {
     }
 
     public List<Book> searchByPublishingHouse(String publishingHouse) {
-        List<Book> result = new ArrayList<>();
+        List<Book> result = new ArrayList<Book>();
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i).getPublishingHouse().equals(publishingHouse)) {
                 result.add(books.get(i));
@@ -59,7 +64,7 @@ public class BookCase {
     }
 
     public List<Book> searchByYear(int year) {
-        List<Book> result = new ArrayList<>();
+        List<Book> result = new ArrayList<Book>();
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i).getYear() > year) {
                 result.add(books.get(i));
@@ -75,8 +80,8 @@ public class BookCase {
 
         BookCase bookCase = (BookCase) o;
 
-        if (name != null ? !name.equals(bookCase.name) : bookCase.name != null) return false;
-        return books != null ? books.equals(bookCase.books) : bookCase.books == null;
+        if (!Objects.equals(name, bookCase.name)) return false;
+        return Objects.equals(books, bookCase.books);
     }
 
     @Override
@@ -84,5 +89,13 @@ public class BookCase {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (books != null ? books.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "BookCase{" +
+                "name='" + name + '\'' +
+                ", books=" + books +
+                '}';
     }
 }

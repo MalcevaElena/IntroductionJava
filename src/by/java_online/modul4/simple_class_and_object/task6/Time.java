@@ -1,6 +1,8 @@
 package by.java_online.modul4.simple_class_and_object.task6;
 
-public class Time {
+import java.io.Serializable;
+
+public class Time implements Serializable {
     private int hour;
     private int minute;
     private int second;
@@ -23,11 +25,7 @@ public class Time {
     }
 
     public Time(int hour, int minute) {
-        if (hour < 0 || hour > 23) {
-            this.hour = 0;
-        } else {
-            this.hour = hour;
-        }
+        this(hour);
         if (minute < 0 || minute > 59) {
             this.minute = 0;
         } else {
@@ -36,16 +34,7 @@ public class Time {
     }
 
     public Time(int hour, int minute, int second) {
-        if (hour < 0 || hour > 23) {
-            this.hour = 0;
-        } else {
-            this.hour = hour;
-        }
-        if (minute < 0 || minute > 59) {
-            this.minute = 0;
-        } else {
-            this.minute = minute;
-        }
+        this (hour, minute);
         if (second < 0 || second > 59) {
             this.second = 0;
         } else {

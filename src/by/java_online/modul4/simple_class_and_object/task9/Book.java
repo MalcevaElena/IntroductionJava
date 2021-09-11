@@ -1,6 +1,9 @@
 package by.java_online.modul4.simple_class_and_object.task9;
 
-public class Book {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Book implements Serializable {
     private static int startID = 1;
     private int id;
     private String title;
@@ -10,6 +13,10 @@ public class Book {
     private int numberOfPages;
     private int price;
     private String bindingType;
+
+    public Book(){
+        this.id = startID++;
+    }
 
     public Book(String title, String author, String publishingHouse, int year,
                 int numberOfPages, int price, String bindingType) {
@@ -98,11 +105,11 @@ public class Book {
         if (year != book.year) return false;
         if (numberOfPages != book.numberOfPages) return false;
         if (price != book.price) return false;
-        if (title != null ? !title.equals(book.title) : book.title != null) return false;
-        if (author != null ? !author.equals(book.author) : book.author != null) return false;
-        if (publishingHouse != null ? !publishingHouse.equals(book.publishingHouse) : book.publishingHouse != null)
+        if (!Objects.equals(title, book.title)) return false;
+        if (!Objects.equals(author, book.author)) return false;
+        if (!Objects.equals(publishingHouse, book.publishingHouse))
             return false;
-        return bindingType != null ? bindingType.equals(book.bindingType) : book.bindingType == null;
+        return Objects.equals(bindingType, book.bindingType);
     }
 
     @Override

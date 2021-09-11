@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        BookCase bookCase = new BookCase("Книги по Java", new ArrayList<>());
+        BookCase bookCase = new BookCase("Книги по Java", new ArrayList<Book>());
 
         bookCase.booksAdd("Философия JAVA", "Брюс Эккель", "Питер",
                 2015, 1159, 1500, "Твердый переплет");

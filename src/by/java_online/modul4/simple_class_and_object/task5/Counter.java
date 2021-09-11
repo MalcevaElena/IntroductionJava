@@ -1,6 +1,8 @@
 package by.java_online.modul4.simple_class_and_object.task5;
 
-public class Counter {
+import java.io.Serializable;
+
+public class Counter implements Serializable {
     private int counter;
 
     public Counter() {

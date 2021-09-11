@@ -1,6 +1,9 @@
 package by.java_online.modul4.simple_class_and_object.task8.entity;
 
-public class Customer {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Customer implements Serializable {
     private static int startID = 1;
     private int id;
     private String firstName;
@@ -9,6 +12,10 @@ public class Customer {
     private String address;
     private int cardNumber;
     private long bankAccountNumber;
+
+    public Customer (){
+        this.id = startID++;
+    }
 
     Customer(String lastName, String firstName, String patronymic, String address,
              int cardNumber, long bankAccountNumber) {
@@ -83,10 +90,10 @@ public class Customer {
         if (id != customer.id) return false;
         if (cardNumber != customer.cardNumber) return false;
         if (bankAccountNumber != customer.bankAccountNumber) return false;
-        if (firstName != null ? !firstName.equals(customer.firstName) : customer.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(customer.lastName) : customer.lastName != null) return false;
-        if (patronymic != null ? !patronymic.equals(customer.patronymic) : customer.patronymic != null) return false;
-        return address != null ? address.equals(customer.address) : customer.address == null;
+        if (!Objects.equals(firstName, customer.firstName)) return false;
+        if (!Objects.equals(lastName, customer.lastName)) return false;
+        if (!Objects.equals(patronymic, customer.patronymic)) return false;
+        return Objects.equals(address, customer.address);
     }
 
     @Override

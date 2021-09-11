@@ -12,7 +12,7 @@ public class Main {
         ShowTime.printTime(time);
         TimeLogic.settingHour(time, 2);
         ShowTime.printTime(time);
-        TimeLogic.settingMinute(time, 4);
+        TimeLogic.settingMinute(time, 04);
         ShowTime.printTime(time);
         TimeLogic.settingSecond(time, 45);
         ShowTime.printTime(time);

@@ -1,10 +1,17 @@
 package by.java_online.modul4.simple_class_and_object.task10.entity;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class Airport {
+public class Airport implements Serializable {
     private String name;
     private List <Airline> baseAirline;
+
+    public Airport(){
+        this.baseAirline = new ArrayList<Airline>();
+    }
 
     public Airport(String name, List<Airline> baseAirline) {
         this.name = name;
@@ -40,8 +47,8 @@ public class Airport {
 
         Airport airport = (Airport) o;
 
-        if (name != null ? !name.equals(airport.name) : airport.name != null) return false;
-        return baseAirline != null ? baseAirline.equals(airport.baseAirline) : airport.baseAirline == null;
+        if (!Objects.equals(name, airport.name)) return false;
+        return Objects.equals(baseAirline, airport.baseAirline);
     }
 
     @Override

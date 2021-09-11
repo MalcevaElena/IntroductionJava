@@ -1,8 +1,10 @@
 package by.java_online.modul4.simple_class_and_object.task4.entity;
 
+import java.io.Serializable;
 import java.time.LocalTime;
+import java.util.Objects;
 
-public class Train {
+public class Train implements Serializable {
     private String destination;
     private int trainNumber;
     private LocalTime departureTime;
@@ -57,8 +59,8 @@ public class Train {
         Train train = (Train) o;
 
         if (trainNumber != train.trainNumber) return false;
-        if (destination != null ? !destination.equals(train.destination) : train.destination != null) return false;
-        return departureTime != null ? departureTime.equals(train.departureTime) : train.departureTime == null;
+        if (!Objects.equals(destination, train.destination)) return false;
+        return Objects.equals(departureTime, train.departureTime);
     }
 
     @Override

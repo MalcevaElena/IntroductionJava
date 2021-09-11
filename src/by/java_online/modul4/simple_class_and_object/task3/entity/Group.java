@@ -1,15 +1,18 @@
 package by.java_online.modul4.simple_class_and_object.task3.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class Group {
+public class Group implements Serializable {
     private String name;
-    private List<Student> studentList;
+    private List<Student> studentList = new ArrayList<Student>();
+
+    public Group(){}
 
     public Group(String name) {
         this.name = name;
-        studentList = new ArrayList<>();
     }
 
     public String getName() {
@@ -28,6 +31,14 @@ public class Group {
         this.studentList = studentList;
     }
 
+    public Student getStudentList(int index) {
+        return studentList.get(index);
+    }
+    public void setStudentList(int index, Student student) {
+        this.studentList = studentList;
+    }
+
+
     public void add(Student student) {
         studentList.add(student);
     }
@@ -39,8 +50,8 @@ public class Group {
 
         Group group = (Group) o;
 
-        if (name != null ? !name.equals(group.name) : group.name != null) return false;
-        return studentList != null ? studentList.equals(group.studentList) : group.studentList == null;
+        if (!Objects.equals(name, group.name)) return false;
+        return Objects.equals(studentList, group.studentList);
     }
 
     @Override

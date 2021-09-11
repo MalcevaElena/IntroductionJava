@@ -1,13 +1,15 @@
 package by.java_online.modul4.simple_class_and_object.task4.entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class Depo {
+public class Depo implements Serializable {
     private List<Train> trains;
 
     {
-        trains = new ArrayList<>();
+        trains = new ArrayList<Train>();
     }
 
     public Depo() {
@@ -28,7 +30,7 @@ public class Depo {
 
         Depo depo = (Depo) o;
 
-        return trains != null ? trains.equals(depo.trains) : depo.trains == null;
+        return Objects.equals(trains, depo.trains);
     }
 
     @Override

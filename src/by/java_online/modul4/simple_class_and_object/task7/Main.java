@@ -6,10 +6,16 @@ package by.java_online.modul4.simple_class_and_object.task7;
  */
 public class Main {
     public static void main(String[] args) {
-        Triangle triangle = new Triangle
-                (new Point(1, 1), new Point(2, 4), new Point(3, 2));
+        Triangle triangle;
+
+        try {
+           // triangle = new Triangle(new Point(1, 1), new Point(2, 4), new Point(3, 2));
+            triangle = new Triangle();
         System.out.printf("Периметр треугольника = %.2f \n", TriangleLogic.getPerimeter(triangle));
         System.out.printf("Площадь треугольника = %.2f \n", TriangleLogic.getArea(triangle));
-        System.out.println("Точка пересечения медиан " + TriangleLogic.medianIntersectionPoint(triangle));
+        System.out.println("Точка пересечения медиан " + TriangleLogic.medianIntersectionPoint(triangle));}
+        catch (RuntimeException e) {
+            e.printStackTrace();
+        }
     }
 }

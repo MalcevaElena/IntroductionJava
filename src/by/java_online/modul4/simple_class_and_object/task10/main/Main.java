@@ -9,7 +9,6 @@ import by.java_online.modul4.simple_class_and_object.task10.show.View;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /* Создать класс Airline, спецификация которого приведена ниже.
  * Определить конструкторы, set- и get- методы и метод toString().

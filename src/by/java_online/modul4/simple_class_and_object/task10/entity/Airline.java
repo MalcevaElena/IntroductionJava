@@ -1,13 +1,19 @@
 package by.java_online.modul4.simple_class_and_object.task10.entity;
 
+import java.io.Serializable;
 import java.time.LocalTime;
+import java.util.Objects;
 
-public class Airline {
+public class Airline implements Serializable {
     private String destination;
     private int flightNumber;
     private String aircraftType;
     private LocalTime departureTime;
     private DayOfWeek dayOfWeek;
+
+    public Airline(){
+
+    }
 
     public Airline(String destination, int flightNumber, String aircraftType,
                    int departureTimeHour, int departureTimeMinute, DayOfWeek dayOfWeek) {
@@ -66,11 +72,9 @@ public class Airline {
         Airline airline = (Airline) o;
 
         if (flightNumber != airline.flightNumber) return false;
-        if (destination != null ? !destination.equals(airline.destination) : airline.destination != null) return false;
-        if (aircraftType != null ? !aircraftType.equals(airline.aircraftType) : airline.aircraftType != null)
-            return false;
-        if (departureTime != null ? !departureTime.equals(airline.departureTime) : airline.departureTime != null)
-            return false;
+        if (!Objects.equals(destination, airline.destination)) return false;
+        if (!Objects.equals(aircraftType, airline.aircraftType)) return false;
+        if (!Objects.equals(departureTime, airline.departureTime)) return false;
         return dayOfWeek == airline.dayOfWeek;
     }
 

@@ -1,10 +1,17 @@
 package by.java_online.modul4.simple_class_and_object.task7;
 
-public class Point {
+import java.io.Serializable;
+
+public class Point implements Serializable {
     private final double x;
     private final double y;
 
-    Point(double x, double y) {
+    public Point() {
+        this.x = 0;
+        this.y = 0;
+    }
+
+    public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }

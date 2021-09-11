@@ -1,11 +1,21 @@
 package by.java_online.modul4.simple_class_and_object.task7;
 
-public class Triangle {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Triangle implements Serializable {
     private final Point a;
     private final Point b;
     private final Point c;
 
-    Triangle(Point a, Point b, Point c) {
+    public Triangle() throws RuntimeException {
+        this.a = new Point(1, 1);
+        this.b = new Point(2, 2);
+        this.c = new Point(5, 5);
+        checkPointsTriangle(a, b, c);
+    }
+
+    public Triangle(Point a, Point b, Point c) throws RuntimeException{
         checkPointsTriangle(a, b, c);
         this.a = a;
         this.b = b;
@@ -24,18 +34,16 @@ public class Triangle {
         return c;
     }
 
-    private void checkPointsTriangle(Point a, Point b, Point c) {
+    private void checkPointsTriangle(Point a, Point b, Point c) throws RuntimeException {
         if (a == null || b == null || c == null) {
-            System.out.println("Point not may be null.");
-            throw new RuntimeException();
+            throw new RuntimeException("Point not may be null.");
         }
         double sideA = a.distanceTo(b);
         double sideB = b.distanceTo(c);
         double sideC = a.distanceTo(c);
 
         if (sideA * sideB * sideC == 0 || sideA + sideB <= sideC || sideA + sideC <= sideB) {
-            System.out.println("Incorrect triangle points.");
-            throw new RuntimeException();
+            throw new RuntimeException("Incorrect triangle points.");
         }
     }
 
@@ -46,9 +54,9 @@ public class Triangle {
 
         Triangle triangle = (Triangle) o;
 
-        if (a != null ? !a.equals(triangle.a) : triangle.a != null) return false;
-        if (b != null ? !b.equals(triangle.b) : triangle.b != null) return false;
-        return c != null ? c.equals(triangle.c) : triangle.c == null;
+        if (!Objects.equals(a, triangle.a)) return false;
+        if (!Objects.equals(b, triangle.b)) return false;
+        return Objects.equals(c, triangle.c);
     }
 
     @Override
