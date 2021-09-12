@@ -1,11 +1,15 @@
 package by.java_online.modul4.simple_class_and_object.task10.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Airport implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -8385142428774306653L;
+
     private String name;
     private List <Airline> baseAirline;
 

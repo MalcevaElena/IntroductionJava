@@ -1,8 +1,12 @@
 package by.java_online.modul4.simple_class_and_object.task7;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Point implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 7444725721545208881L;
+
     private final double x;
     private final double y;
 

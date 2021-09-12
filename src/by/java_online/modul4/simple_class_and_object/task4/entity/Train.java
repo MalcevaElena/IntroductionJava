@@ -1,10 +1,14 @@
 package by.java_online.modul4.simple_class_and_object.task4.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.Objects;
 
 public class Train implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 8039456960860565942L;
+
     private String destination;
     private int trainNumber;
     private LocalTime departureTime;

@@ -1,10 +1,14 @@
 package by.java_online.modul4.simple_class_and_object.task3.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Objects;
 
 public class Student implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -723503427662931684L;
+
     private String lastName;
     private String name;
     private int age;

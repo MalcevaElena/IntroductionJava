@@ -1,9 +1,13 @@
 package by.java_online.modul4.simple_class_and_object.task7;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Triangle implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -4726067147851259878L;
+
     private final Point a;
     private final Point b;
     private final Point c;

@@ -1,10 +1,14 @@
 package by.java_online.modul4.simple_class_and_object.task10.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.Objects;
 
 public class Airline implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -5342124791904629624L;
+
     private String destination;
     private int flightNumber;
     private String aircraftType;

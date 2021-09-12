@@ -1,11 +1,15 @@
 package by.java_online.modul4.simple_class_and_object.task4.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Depo implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -613115195023337187L;
+
     private List<Train> trains;
 
     {

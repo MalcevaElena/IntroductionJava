@@ -1,9 +1,13 @@
 package by.java_online.modul4.simple_class_and_object.task8.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Customer implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -6222996042176909338L;
+
     private static int startID = 1;
     private int id;
     private String firstName;

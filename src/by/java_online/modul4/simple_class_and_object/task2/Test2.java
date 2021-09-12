@@ -5,9 +5,14 @@ package by.java_online.modul4.simple_class_and_object.task2;
  * Добавьте set- и get- методы для полей экземпляра класса.
  */
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Test2 {
+public class Test2 implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -5920072530467860369L;
+
     private String name;
     private int age;
 

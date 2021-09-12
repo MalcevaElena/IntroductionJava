@@ -1,8 +1,12 @@
 package by.java_online.modul4.simple_class_and_object.task5;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Counter implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -7201464051180227230L;
+
     private int counter;
 
     public Counter() {

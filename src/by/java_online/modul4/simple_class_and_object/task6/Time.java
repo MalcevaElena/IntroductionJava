@@ -1,8 +1,12 @@
 package by.java_online.modul4.simple_class_and_object.task6;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Time implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -8217649467974663997L;
+
     private int hour;
     private int minute;
     private int second;
