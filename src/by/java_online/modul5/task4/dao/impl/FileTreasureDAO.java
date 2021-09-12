@@ -13,7 +13,7 @@ public class FileTreasureDAO implements TreasureDAO {
 
     @Override
     public List<Treasure> readFile() throws DAOException {
-        List<Treasure> treasureList = new ArrayList<>();
+        List<Treasure> treasureList = new ArrayList<Treasure>();
         try (BufferedReader reader = new BufferedReader(new FileReader(TREASURE_SOURCE))) {
 
             while (reader.readLine() != null) {

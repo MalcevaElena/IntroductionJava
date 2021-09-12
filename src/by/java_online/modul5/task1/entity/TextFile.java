@@ -1,7 +1,13 @@
 package by.java_online.modul5.task1.entity;
 
-public class TextFile extends File {
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.Objects;
 
+public class TextFile extends File  implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = -1928894122172930098L;
     private StringBuffer text;
 
     public TextFile() {
@@ -32,7 +38,7 @@ public class TextFile extends File {
 
         TextFile textFile = (TextFile) o;
 
-        return text != null ? text.equals(textFile.text) : textFile.text == null;
+        return Objects.equals(text, textFile.text);
     }
 
     @Override

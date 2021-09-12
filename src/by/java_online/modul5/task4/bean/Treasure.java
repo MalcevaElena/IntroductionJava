@@ -1,12 +1,13 @@
 package by.java_online.modul5.task4.bean;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Treasure implements Serializable {
-    
-    private static final long serialVersionUID = 2L;
 
+    @Serial
+    private static final long serialVersionUID = -3443593963608432119L;
     private String name;
     private int cost;
 

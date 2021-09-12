@@ -1,19 +1,24 @@
 package by.java_online.modul5.task1.entity;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Directory {
+public class Directory implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = 1437774274608642102L;
+    
     private String name;
     private List<TextFile> textFileList;
     private List<Directory> directoryList;
 
     {
         name = "Новая папка";
-        textFileList = new ArrayList<>();
-        directoryList = new ArrayList<>();
+        textFileList = new ArrayList<TextFile>();
+        directoryList = new ArrayList<Directory>();
     }
 
     public Directory() {

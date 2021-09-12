@@ -1,18 +1,20 @@
 package by.java_online.modul5.task4.bean;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Cave implements Serializable {
-    private static final long serialVersionUID = 1L;
 
+    @Serial
+    private static final long serialVersionUID = 1538010728517178599L;
     private String name = "Пещера дракона";
     private List<Treasure> treasureList;
 
     public Cave() {
-        treasureList = new ArrayList<>();
+        treasureList = new ArrayList<Treasure>();
     }
 
     public Cave(List<Treasure> treasureList) {

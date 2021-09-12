@@ -2,9 +2,15 @@ package by.java_online.modul5.task5.bean.implFlower;
 
 import by.java_online.modul5.task5.bean.Flower;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Chrysanthemum implements Flower {
+public class Chrysanthemum implements Flower, Serializable {
+
+    @Serial
+    private static final long serialVersionUID = -6346026671910633144L;
+
     private String name = "Chrysanthemum";
     private int price = 100;
 

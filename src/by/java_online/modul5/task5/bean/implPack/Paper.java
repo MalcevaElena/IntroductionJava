@@ -2,9 +2,14 @@ package by.java_online.modul5.task5.bean.implPack;
 
 import by.java_online.modul5.task5.bean.Pack;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Paper implements Pack {
+public class Paper implements Pack, Serializable {
+    @Serial
+    private static final long serialVersionUID = -3079847425395529951L;
+
     private String name = "Paper";
     private int price = 10;
 

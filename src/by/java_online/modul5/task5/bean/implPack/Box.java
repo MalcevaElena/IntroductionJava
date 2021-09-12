@@ -2,9 +2,15 @@ package by.java_online.modul5.task5.bean.implPack;
 
 import by.java_online.modul5.task5.bean.Pack;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Box implements Pack {
+public class Box implements Pack, Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 6242616682659199710L;
+
     private String name = "Box";
     private int price = 50;
 

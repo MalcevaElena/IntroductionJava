@@ -1,5 +1,6 @@
 package by.java_online.modul5.task2;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -8,12 +9,13 @@ public class Payment {
     private List<Product> productList;
 
     public Payment() {
-        this.productList = new ArrayList<>();
+        this.productList = new ArrayList<Product>();
     }
 
     public Payment(List<Product> productList) {
         this.productList = productList;
     }
+
 
     public void add(String name, double price) {
         productList.add(new Product(name,price));
@@ -90,7 +92,7 @@ public class Payment {
 
         Payment payment = (Payment) o;
 
-        return productList != null ? productList.equals(payment.productList) : payment.productList == null;
+        return Objects.equals(productList, payment.productList);
     }
 
     @Override

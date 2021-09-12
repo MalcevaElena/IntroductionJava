@@ -1,6 +1,13 @@
 package by.java_online.modul5.task1.entity;
 
-public class File {
+import java.io.Serial;
+import java.io.Serializable;
+import java.util.Objects;
+
+public class File implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 915519951863315168L;
 
     private String name = ".txt";
 
@@ -26,7 +33,7 @@ public class File {
 
         File file = (File) o;
 
-        return name != null ? name.equals(file.name) : file.name == null;
+        return Objects.equals(name, file.name);
     }
 
     @Override

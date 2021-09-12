@@ -1,11 +1,15 @@
 package by.java_online.modul5.task3;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Calendar {
+public class Calendar implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = 3589745897809568279L;
     private int year;
     private List<Month> monthList;
 
@@ -66,8 +70,10 @@ public class Calendar {
                 '}';
     }
 
-    public static class Month {
+    public static class Month implements Serializable {
 
+        @Serial
+        private static final long serialVersionUID = 2858917385034257383L;
         private String name;
         private List<Date> dateList;
 
@@ -126,8 +132,10 @@ public class Calendar {
                     '}';
         }
 
-        public static class Date {
+        public static class Date implements Serializable {
 
+            @Serial
+            private static final long serialVersionUID = 4892888861482488809L;
             private int number;
             private DayOfWeek dayOfWeek;
 

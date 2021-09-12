@@ -2,9 +2,14 @@ package by.java_online.modul5.task5.bean.implFlower;
 
 import by.java_online.modul5.task5.bean.Flower;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Rose implements Flower {
+public class Rose implements Flower, Serializable {
+    @Serial
+    private static final long serialVersionUID = -725564850920839343L;
+
     private String name = "Rose";
     private int price = 120;
 
