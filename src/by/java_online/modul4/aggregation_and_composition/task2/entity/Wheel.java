@@ -1,8 +1,12 @@
 package by.java_online.modul4.aggregation_and_composition.task2.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class Wheel implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1982147111691142760L;
+
     private int radius = 14;
     private String material = "Литые диски";
     private boolean whole = true;

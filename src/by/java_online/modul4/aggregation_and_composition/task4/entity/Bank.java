@@ -1,11 +1,15 @@
 package by.java_online.modul4.aggregation_and_composition.task4.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Bank implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 9044602202777095327L;
+
     private String name;
     private List<Customer> customers;
 

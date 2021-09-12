@@ -1,11 +1,15 @@
 package by.java_online.modul4.aggregation_and_composition.task5.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
 public class Voucher implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -4195270395706986879L;
+
     private TypeVoucher typeVoucher;
     private TypeTransport typeTransport;
     private TypeFood typeFood;

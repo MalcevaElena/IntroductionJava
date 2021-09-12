@@ -1,9 +1,14 @@
 package by.java_online.modul4.aggregation_and_composition.task3.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class City implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = -3430438963632190141L;
+
     private String name;
     private double area;
 

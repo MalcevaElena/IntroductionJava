@@ -1,11 +1,15 @@
 package by.java_online.modul4.aggregation_and_composition.task4.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Customer implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -178590257546095779L;
+
     private String fullName;
     private int age;
     private List<Account> accounts = new ArrayList<Account>();

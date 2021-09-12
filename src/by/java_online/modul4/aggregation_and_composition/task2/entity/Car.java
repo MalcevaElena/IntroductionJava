@@ -1,11 +1,15 @@
 package by.java_online.modul4.aggregation_and_composition.task2.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Car implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 5199547240479872439L;
+
     private final static int MAX_VOLUME_FUEL_TANK = 40;
     private int fuelQuantity = 0;
     private String carModel = "Lada";

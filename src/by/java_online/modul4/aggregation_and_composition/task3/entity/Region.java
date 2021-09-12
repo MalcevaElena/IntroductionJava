@@ -1,5 +1,6 @@
 package by.java_online.modul4.aggregation_and_composition.task3.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +8,9 @@ import java.util.Objects;
 
 //область
 public class Region implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 4806237410802516599L;
+
     private String name;
     private City regionalCenter;
     private List<District> districtList;

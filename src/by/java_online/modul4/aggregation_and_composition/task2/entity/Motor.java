@@ -1,9 +1,14 @@
 package by.java_online.modul4.aggregation_and_composition.task2.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Motor implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = -5628206654471036482L;
+
     private int enginePower;
     private String type;
 

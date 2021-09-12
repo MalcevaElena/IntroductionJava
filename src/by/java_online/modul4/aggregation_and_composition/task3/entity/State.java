@@ -1,11 +1,15 @@
 package by.java_online.modul4.aggregation_and_composition.task3.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class State implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 6284096681588272961L;
+
     private String name;
     private String capital;
     private List<Region> regionList;

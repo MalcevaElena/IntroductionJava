@@ -1,9 +1,13 @@
 package by.java_online.modul4.aggregation_and_composition.task1.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Word implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -2648149654376698546L;
+
     private String value;
 
     public Word() {

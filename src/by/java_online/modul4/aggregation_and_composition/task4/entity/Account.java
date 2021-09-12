@@ -1,9 +1,13 @@
 package by.java_online.modul4.aggregation_and_composition.task4.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
 public class Account implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -6962549869957687029L;
+
     private String name;
     private String accountNumber;
     private int balance = 0;
